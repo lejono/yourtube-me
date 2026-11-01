@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YourTube Admin</title>
+  <link rel="stylesheet" href="/css/admin.css">
+</head>
+<body>
+  <!-- Login Screen -->
+  <div id="login-screen" class="screen">
+    <div class="login-box">
+      <h1>Your<span>Tube</span> Admin</h1>
+      <form id="login-form">
+        <input type="password" id="password" placeholder="YourTube parent password" autocomplete="current-password">
+        <button type="submit">Log In</button>
+        <div class="error" id="login-error"></div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Dashboard -->
+  <div id="dashboard" class="hidden">
+    <header>
+      <div class="header-inner">
+        <h1>Your<span>Tube</span> Admin</h1>
+        <button id="logout-btn" class="btn-logout">Log Out</button>
+      </div>
+    </header>
+
+    <main>
+      <!-- Status Panel -->
+      <section class="card" id="status-section">
+        <h2>Status</h2>
+        <div class="status-grid" id="status-grid">
+          <div class="status-item">
+            <span class="status-label">Server Uptime</span>
+            <span class="status-value" id="status-uptime">--</span>
+          </div>
+          <div class="status-item">
+            <span class="status-label">YouTube</span>
+            <span class="status-value" id="status-youtube">--</span>
+          </div>
+          <div class="status-item">
+            <span class="status-label">Channels</span>
+            <span class="status-value" id="status-channels">--</span>
+          </div>
+          <div class="status-item">
+            <span class="status-label">Videos</span>
+            <span class="status-value" id="status-videos">--</span>
+          </div>
+          <div class="status-item">
+            <span class="status-label">Watches</span>
+            <span class="status-value" id="status-watches">--</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- YouTube Connection -->
+      <section class="card" id="youtube-section">
+        <h2>YouTube Connection</h2>
+        <div id="youtube-status">
+          <p class="text-muted">Checking connection...</p>
+        </div>
+      </section>
+
+      <!-- Import -->
+      <section class="card" id="import-section">
+        <h2>Import</h2>
+        <div class="btn-row">
+          <button id="import-subs-btn" class="btn-secondary">Import Subscriptions</button>
+          <button id="import-liked-btn" class="btn-secondary">Import Liked Videos</button>
+        </div>
+        <div id="import-status" class="hidden">
+          <p class="text-muted" id="import-status-text"></p>
+        </div>
+      </section>
+
+      <!-- Channels -->
+      <section class="card" id="channels-section">
+        <h2>Channels</h2>
+        <div class="add-form">
+          <input type="text" id="add-channel-id" placeholder="Channel ID (UCxxxxxxx)">
+          <input type="text" id="add-channel-title" placeholder="Channel name">
+          <button id="add-channel-btn" class="btn-secondary">Add</button>
+        </div>
+        <div id="channel-list" class="item-list">
+          <p class="text-muted">Loading channels...</p>
+        </div>
+      </section>
+
+      <!-- Taste Profile -->
+      <section class="card" id="profile-section">
+        <h2>Taste Profile</h2>
+        <div id="profile-content">
+          <p class="text-muted">Loading profile...</p>
+        </div>
+        <button id="rebuild-profile-btn" class="btn-secondary">Rebuild Profile</button>
+      </section>
+
+      <!-- Content Guidelines -->
+      <section class="card" id="guidelines-section">
+        <h2>Content Guidelines</h2>
+        <textarea id="guidelines-text" rows="6" placeholder="Enter content guidelines for AI filtering..."></textarea>
+        <div class="btn-row">
+          <button id="save-guidelines-btn" class="btn-primary-sm">Save Guidelines</button>
+          <span id="guidelines-saved" class="save-indicator hidden">Saved</span>
+        </div>
+      </section>
+
+      <!-- Watch History -->
+      <section class="card" id="history-section">
+        <h2>Watch History</h2>
+        <div id="history-list" class="item-list">
+          <p class="text-muted">Loading history...</p>
+        </div>
+      </section>
+
+      <!-- Blocked Items -->
+      <section class="card" id="blocked-section">
+        <h2>Blocked Items</h2>
+        <div class="add-form">
+          <select id="block-type">
+            <option value="channel">Channel</option>
+            <option value="video">Video</option>
+          </select>
+          <input type="text" id="block-id" placeholder="ID to block">
+          <button id="block-btn" class="btn-secondary">Block</button>
+        </div>
+        <div id="blocked-list" class="item-list">
+          <p class="text-muted">Loading blocked items...</p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="/js/admin.js" type="module"></script>
+</body>
+</html>

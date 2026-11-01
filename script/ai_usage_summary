@@ -1,0 +1,14 @@
+#!/usr/bin/env node
+import { readFile } from 'node:fs/promises';
+import { getAIUsageLogPath, parseUsageLogText, summarizeUsageRecords } from '../lib/ai-usage.js';
+
+const logPath = process.argv[2] || getAIUsageLogPath();
+
+try {
+  const text = await readFile(logPath, 'utf8');
+  const summary = summarizeUsageRecords(parseUsageLogText(text));
+  console.log(JSON.stringify(summary, null, 2));
+} catch (err) {
+  console.error(`Failed to read AI usage log at ${logPath}: ${err.message}`);
+  process.exitCode = 1;
+}

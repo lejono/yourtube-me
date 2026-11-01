@@ -1,0 +1,346 @@
+/* YourTube landing page — light parent-facing theme */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: #1a1a1a;
+  background: #fff;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* --- Header --- */
+
+.site-header {
+  padding: 1.25rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.logo-your {
+  color: #1a1a1a;
+}
+
+.logo-tube {
+  color: #ff4444;
+}
+
+.header-login {
+  color: #555;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 0.4rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.header-login:hover {
+  border-color: #999;
+  color: #1a1a1a;
+}
+
+/* --- Hero --- */
+
+.hero {
+  padding: 5rem 0 4.5rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.75rem;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -1px;
+  max-width: 680px;
+  margin: 0 auto 1.25rem;
+  color: #111;
+}
+
+.hero-sub {
+  font-size: 1.2rem;
+  line-height: 1.55;
+  color: #555;
+  max-width: 540px;
+  margin: 0 auto 2.25rem;
+}
+
+.cta-btn {
+  display: inline-block;
+  padding: 0.9rem 2.25rem;
+  background: #ff4444;
+  color: #fff;
+  font-size: 1.05rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.15s, transform 0.1s;
+  box-shadow: 0 2px 8px rgba(255, 68, 68, 0.25);
+}
+
+.cta-btn:hover {
+  background: #e83333;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(255, 68, 68, 0.3);
+}
+
+.cta-btn:active {
+  transform: translateY(0);
+}
+
+/* --- Kid code entry --- */
+
+.kid-code-entry {
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e0e0e0;
+}
+
+.kid-code-label {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 0.75rem;
+}
+
+.code-form {
+  display: flex;
+  gap: 0.5rem;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.code-form input {
+  flex: 1;
+  padding: 0.7rem 1rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+.code-form input:focus {
+  outline: none;
+  border-color: #ff4444;
+}
+
+.code-btn {
+  padding: 0.7rem 1.5rem;
+  background: #ff4444;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.code-btn:hover {
+  background: #e83333;
+}
+
+.code-error {
+  color: #ff4444;
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+}
+
+.hidden { display: none !important; }
+
+/* --- How it works --- */
+
+.how-it-works {
+  padding: 4.5rem 0;
+  background: #fafafa;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.how-it-works h2 {
+  text-align: center;
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  color: #111;
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.step {
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  border: 1px solid #e8e8e8;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.step-number {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #ff4444;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+}
+
+.step h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #111;
+}
+
+.step p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.55;
+}
+
+/* --- Trust section --- */
+
+.trust {
+  padding: 4rem 0;
+}
+
+.trust-points {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  text-align: center;
+}
+
+.trust-point h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+  color: #111;
+}
+
+.trust-point p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.55;
+}
+
+/* --- Footer --- */
+
+.site-footer {
+  padding: 2.5rem 0;
+  border-top: 1px solid #eee;
+  text-align: center;
+}
+
+.site-footer p {
+  color: #888;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer-link {
+  color: #888;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.15s;
+}
+
+.footer-link:hover {
+  color: #555;
+}
+
+/* --- Responsive --- */
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 3.5rem 0 3rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+    letter-spacing: -0.5px;
+  }
+
+  .hero-sub {
+    font-size: 1.05rem;
+  }
+
+  .steps {
+    grid-template-columns: 1fr;
+    max-width: 440px;
+    margin: 0 auto;
+  }
+
+  .trust-points {
+    grid-template-columns: 1fr;
+    max-width: 440px;
+    margin: 0 auto;
+    gap: 1.5rem;
+  }
+
+  .how-it-works {
+    padding: 3rem 0;
+  }
+
+  .how-it-works h2 {
+    margin-bottom: 2rem;
+  }
+
+  .trust {
+    padding: 3rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.65rem;
+  }
+
+  .hero-sub {
+    font-size: 1rem;
+  }
+
+  .cta-btn {
+    padding: 0.8rem 1.75rem;
+    font-size: 1rem;
+  }
+
+  .step {
+    padding: 1.5rem 1.25rem;
+  }
+}

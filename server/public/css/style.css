@@ -1,0 +1,454 @@
+/* YourTube — iPad-optimised dark theme */
+
+:root {
+  --bg: #0f0f0f;
+  --surface: #1a1a1a;
+  --surface-hover: #252525;
+  --border: #333;
+  --text: #e8e8e8;
+  --text-muted: #888;
+  --accent: #ff4444;
+  --accent-hover: #ff6666;
+  --tab-active-bg: #ff4444;
+  --tab-active-text: #fff;
+  --radius: 8px;
+  --card-radius: 10px;
+  --header-height: 56px;
+}
+
+/* --- Reset / base --- */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  min-height: 100vh;
+  min-height: 100dvh;
+  overscroll-behavior-y: none;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* --- Screens --- */
+
+.screen {
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+/* --- No-access screen --- */
+
+.no-access-msg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding: 2rem;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 1.2rem;
+}
+
+/* --- App header --- */
+
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--header-height);
+  padding: 0 1rem;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.app-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: -0.5px;
+}
+
+.kid-name {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.logout-btn {
+  background: none;
+  border: 1px solid #444;
+  color: #888;
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.3rem;
+  font-size: 0.75rem;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* --- Search bar --- */
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: var(--header-height);
+  z-index: 95;
+}
+
+.search-input {
+  flex: 1;
+  padding: 0.5rem 0.75rem;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  font-size: 0.9rem;
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.search-input::placeholder {
+  color: var(--text-muted);
+}
+
+.search-input:focus {
+  border-color: var(--accent);
+}
+
+.search-clear {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 1.25rem;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  line-height: 1;
+  border-radius: var(--radius);
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.search-clear:hover {
+  color: var(--text);
+}
+
+/* --- Channel tabs --- */
+
+.channel-tabs {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg);
+  z-index: 90;
+}
+
+.channel-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.channel-tab {
+  flex-shrink: 0;
+  padding: 0.4rem 0.9rem;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+  white-space: nowrap;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.channel-tab:hover {
+  background: var(--surface-hover);
+  border-color: var(--text-muted);
+}
+
+.channel-tab.active {
+  background: var(--tab-active-bg);
+  border-color: var(--tab-active-bg);
+  color: var(--tab-active-text);
+  font-weight: 600;
+}
+
+/* --- Video grid --- */
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.empty-state {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: var(--text-muted);
+  padding: 3rem 1rem;
+  font-size: 1rem;
+}
+
+/* --- Video card --- */
+
+.video-card {
+  background: var(--surface);
+  border-radius: var(--card-radius);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.12s ease, background 0.12s ease;
+  outline: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.video-card:hover,
+.video-card:focus-visible {
+  background: var(--surface-hover);
+  transform: translateY(-2px);
+}
+
+.video-card:active {
+  transform: translateY(0);
+}
+
+.video-thumb {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+  background: var(--border);
+}
+
+.video-thumb--placeholder {
+  background: var(--border);
+  aspect-ratio: 16 / 9;
+}
+
+.video-info {
+  padding: 0.65rem 0.75rem 0.75rem;
+}
+
+.video-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--text);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.video-channel {
+  margin-top: 0.3rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* --- Video meta row (channel + like) --- */
+
+.video-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.video-meta .video-channel {
+  flex: 1;
+  min-width: 0;
+}
+
+/* --- Like button --- */
+
+.btn-like {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 1.25rem;
+  cursor: pointer;
+  padding: 0.2rem 0.4rem;
+  line-height: 1;
+  border-radius: var(--radius);
+  transition: color 0.15s, transform 0.1s;
+  flex-shrink: 0;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.btn-like:hover {
+  color: var(--accent);
+}
+
+.btn-like.liked {
+  color: var(--accent);
+}
+
+.btn-like:active {
+  transform: scale(1.2);
+}
+
+/* --- Player like button --- */
+
+.player-like-btn {
+  margin-top: 0.75rem;
+  font-size: 1.5rem;
+  padding: 0.3rem 0.6rem;
+}
+
+/* --- Watched state --- */
+
+.video-card.watched {
+  opacity: 0.6;
+}
+
+.video-card.watched:hover,
+.video-card.watched:focus-visible {
+  opacity: 0.8;
+}
+
+.thumb-wrap {
+  position: relative;
+}
+
+.watched-badge {
+  position: absolute;
+  bottom: 6px;
+  right: 6px;
+  background: rgba(0, 0, 0, 0.75);
+  color: #ccc;
+  font-size: 0.7rem;
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  pointer-events: none;
+}
+
+/* --- Loading indicator --- */
+
+.loading {
+  text-align: center;
+  padding: 2rem;
+  color: var(--text-muted);
+}
+
+/* --- Player screen --- */
+
+#player-screen {
+  display: flex;
+  flex-direction: column;
+  background: #000;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+.player-header {
+  padding: 0.75rem 1rem;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  color: var(--text);
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--radius);
+  transition: background 0.12s;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.back-btn:hover {
+  background: var(--surface-hover);
+}
+
+.player-container {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000;
+}
+
+.player-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+.player-info {
+  padding: 1rem;
+  background: var(--bg);
+  flex: 1;
+}
+
+.player-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.4;
+  margin-bottom: 0.4rem;
+}
+
+.player-channel {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+/* --- Mobile: single column below 600px --- */
+
+@media (max-width: 600px) {
+  .video-grid {
+    grid-template-columns: 1fr;
+    padding: 0.75rem;
+    gap: 0.75rem;
+  }
+
+  .app-title {
+    font-size: 1.1rem;
+  }
+}
+
+/* --- iPad landscape / large screens --- */
+
+@media (min-width: 1024px) {
+  .video-grid {
+    padding: 1.25rem;
+    gap: 1.25rem;
+  }
+}

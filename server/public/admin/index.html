@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YourTube Admin</title>
+  <link rel="stylesheet" href="/admin/css/admin.css">
+</head>
+<body>
+
+  <!-- ===== Auth screen ===== -->
+  <div id="auth-screen" class="screen">
+
+    <div class="auth-box">
+      <h1>YourTube</h1>
+      <p class="tagline">Parent dashboard</p>
+
+      <!-- Signup form -->
+      <div id="signup-form">
+        <h2>Create your account</h2>
+        <div id="signup-error" class="error-msg hidden"></div>
+        <form>
+          <div class="form-group">
+            <label for="signup-email">Email</label>
+            <input type="email" id="signup-email" autocomplete="email" required>
+          </div>
+          <div class="form-group">
+            <label for="signup-password">Password</label>
+            <input type="password" id="signup-password" autocomplete="new-password" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Create account</button>
+        </form>
+        <p class="auth-blurb">YourTube is a filtered YouTube feed for kids. You set the interests, we suggest safe channels, and your child gets a clean feed on their iPad — no login needed.</p>
+        <p class="auth-toggle">
+          Already have an account?
+          <button type="button" id="show-login-btn">Log in</button>
+        </p>
+      </div>
+
+      <!-- Login form -->
+      <div id="login-form" class="hidden">
+        <h2>Log in</h2>
+        <div id="login-error" class="error-msg hidden"></div>
+        <form>
+          <div class="form-group">
+            <label for="login-email">Email</label>
+            <input type="email" id="login-email" autocomplete="email" required>
+          </div>
+          <div class="form-group">
+            <label for="login-password">Password</label>
+            <input type="password" id="login-password" autocomplete="current-password" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Log in</button>
+        </form>
+        <p class="auth-toggle">
+          Need an account?
+          <button type="button" id="show-signup-btn">Sign up</button>
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ===== Dashboard screen ===== -->
+  <div id="dashboard-screen" class="screen hidden">
+    <div class="page">
+
+      <div class="dash-header">
+        <h1>Your children</h1>
+        <button id="logout-btn" class="btn btn-secondary">Log out</button>
+      </div>
+
+      <div class="dash-intro">
+        <p>Each child gets their own filtered YouTube feed. Add a child, tell us what they're into, and our algorithm will suggest channels for you to review. Once you approve, they get a personal link to bookmark on their device. No login, no password, no YouTube algorithm.</p>
+      </div>
+
+      <div class="section-header">
+        <h2>Children</h2>
+        <button id="add-kid-btn" class="btn btn-secondary">+ Add a child</button>
+      </div>
+
+      <div id="kid-list" class="kid-list"></div>
+
+      <!-- Add kid form (hidden by default) -->
+      <div id="add-kid-form" class="add-kid-form hidden">
+        <h3>Add a child</h3>
+        <p class="hint">Add your first child to get started. Tell us their interests and we'll suggest age-appropriate YouTube channels for you to review.</p>
+        <div id="add-kid-error" class="error-msg hidden"></div>
+        <form id="add-kid-form-el">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="add-kid-name">Name</label>
+              <input type="text" id="add-kid-name" placeholder="e.g. Alex" required>
+            </div>
+            <div class="form-group">
+              <label for="add-kid-age">Age</label>
+              <input type="number" id="add-kid-age" min="2" max="18" placeholder="e.g. 9">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>What are they into?</label>
+            <div id="interest-pills" class="interest-pills"></div>
+            <input type="text" id="add-kid-interests-custom" placeholder="Anything else? Type here">
+          </div>
+          <div class="form-group">
+            <label for="add-kid-guidelines">Additional content guidelines (optional)</label>
+            <textarea id="add-kid-guidelines" placeholder="e.g. No scary dinosaurs, nothing competitive"></textarea>
+            <p class="hint" style="margin-top:0.4rem">Our channels are already selected for age-appropriateness. Add any extra preferences here, e.g. &ldquo;no scary dinosaurs&rdquo; or &ldquo;nothing competitive&rdquo;.</p>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary" style="width:auto">Add child</button>
+            <button type="button" id="cancel-add-kid-btn" class="btn btn-secondary">Cancel</button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ===== Kid detail screen ===== -->
+  <div id="detail-screen" class="screen hidden">
+    <div class="page">
+
+      <button id="back-to-dashboard-btn" class="back-link">&#8592; Back</button>
+
+      <div class="detail-card">
+        <h2 id="detail-kid-name"></h2>
+        <p class="meta" id="detail-kid-meta"></p>
+
+        <!-- Status bar (video/channel count + last updated indicator) -->
+        <div id="detail-status-section"></div>
+
+        <!-- Hidden field for kid id used by token/revoke actions -->
+        <input type="hidden" id="setup-link-kid-id" value="">
+
+        <p class="setup-link-label">Your child's code</p>
+        <p class="hint" style="margin-bottom:0.5rem">Tell your child to go to <strong>yourtube.me</strong> and type this code. No link to copy, no account to create.</p>
+        <div class="setup-link-row">
+          <span class="setup-link-url code-display" id="setup-link-url"></span>
+          <button id="copy-setup-link-btn" class="btn btn-secondary" style="white-space:nowrap">Copy code</button>
+        </div>
+        <div class="setup-link-actions">
+          <button id="regen-token-btn" class="btn btn-secondary">New code</button>
+          <button id="revoke-devices-btn" class="btn btn-danger">Revoke all devices</button>
+        </div>
+      </div>
+
+      <!-- Suggestions / channel status section (dynamically populated) -->
+      <div id="suggestions-area"></div>
+
+      <!-- Feed preview with parent ratings (dynamically populated) -->
+      <div id="feed-preview-section"></div>
+
+      <!-- Guidelines editor (dynamically populated) -->
+      <div id="guidelines-section"></div>
+
+      <div class="channels-section detail-card">
+        <h3>Your channels</h3>
+        <p class="hint" style="margin-bottom:0.75rem">These are the channels in this child's feed. Videos are filtered before appearing.</p>
+        <ul id="channel-list" class="channel-list"></ul>
+        <!-- Add channel input row (dynamically populated) -->
+        <div id="add-channel-row" class="add-channel-row"></div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="/admin/js/admin.js"></script>
+</body>
+</html>

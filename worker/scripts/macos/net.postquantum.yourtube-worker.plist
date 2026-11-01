@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  YourTube background worker as a system LaunchDaemon, running as the
+  dedicated non-admin `ytworker` account. The worker holds the server API
+  key and a Claude token, so it gets its own account, isolated from every
+  other service on the machine.
+
+  World-readable, so no secrets here: YOURTUBE_WORKER_KEY and the Claude
+  token come from the mode-600 env files via run-worker.sh.
+-->
+<plist version="1.0"><dict>
+  <key>Label</key><string>net.postquantum.yourtube-worker</string>
+  <key>UserName</key><string>ytworker</string>
+  <key>GroupName</key><string>staff</string>
+  <key>WorkingDirectory</key><string>/Users/ytworker/src/yourtube/worker</string>
+  <key>ProgramArguments</key><array>
+    <string>/Users/ytworker/team/yourtube/bin/run-worker.sh</string>
+    <string>yourtube-worker</string>
+  </array>
+  <key>EnvironmentVariables</key><dict>
+    <!--
+      .local/bin first: Claude Code is installed there by the official
+      installer, and the AI filter spawns a bare `claude` resolved through
+      PATH. launchd execs the wrapper directly with no login shell, so the
+      .zshrc that normally supplies this path is never read.
+    -->
+    <key>PATH</key><string>/Users/ytworker/.local/bin:/opt/homebrew/bin:/usr/bin:/bin</string>
+    <key>YOURTUBE_RUNTIME_DIR</key><string>/Users/ytworker/team/yourtube</string>
+    <key>YOURTUBE_SERVER_URL</key><string>https://yourtube.me</string>
+    <key>YOURTUBE_AI_FILTER_ENABLED</key><string>true</string>
+    <!-- Telemetry and heartbeats live outside the checkout so a re-clone
+         never loses them and the checkout stays pristine. -->
+    <key>YOURTUBE_AI_USAGE_LOG</key><string>/Users/ytworker/team/yourtube/logs/ai-usage.jsonl</string>
+    <key>YOURTUBE_WORKER_HEARTBEAT_DIR</key><string>/Users/ytworker/team/yourtube/run</string>
+    <key>NODE_ENV</key><string>production</string>
+  </dict>
+  <key>RunAtLoad</key><true/>
+  <key>KeepAlive</key><dict><key>SuccessfulExit</key><false/></dict>
+  <key>ThrottleInterval</key><integer>30</integer>
+  <key>StandardOutPath</key><string>/Users/ytworker/team/yourtube/logs/yourtube-worker.log</string>
+  <key>StandardErrorPath</key><string>/Users/ytworker/team/yourtube/logs/yourtube-worker.err.log</string>
+</dict></plist>

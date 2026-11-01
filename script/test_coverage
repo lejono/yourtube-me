@@ -1,0 +1,11 @@
+#!/bin/bash
+# Gate script for storkit — runs Node.js tests
+set -e
+cd "$(dirname "$0")/.."
+
+# Run any test files that exist
+if ls test/*.test.js 1>/dev/null 2>&1; then
+    node --test test/*.test.js
+else
+    echo "No test files found — gate passes"
+fi

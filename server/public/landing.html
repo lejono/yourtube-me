@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>YourTube — Parent-controlled YouTube for kids</title>
+        <meta
+            name="description"
+            content="YourTube gives parents control over what their kids watch on YouTube. AI curates safe channels. No algorithm. No ads rabbit hole. No login for kids."
+        />
+        <link rel="stylesheet" href="/css/landing.css" />
+    </head>
+    <body>
+        <header class="site-header">
+            <div class="container">
+                <div class="logo">
+                    <span class="logo-your">Your</span
+                    ><span class="logo-tube">Tube</span>
+                </div>
+                <a href="/admin" class="header-login">Log in (parents)</a>
+            </div>
+        </header>
+
+        <main>
+            <section class="hero">
+                <div class="container">
+                    <h1>Don't let YouTube attention-mine your children</h1>
+                    <p class="hero-sub">
+                        YourTube helps you take back control. Instead of social media companies deciding
+                        what your child watches, you and your child choose videos
+                        that are both fun and enriching.
+                    </p>
+                    <a href="/admin" class="cta-btn">Set up your family</a>
+
+                    <div class="kid-code-entry">
+                        <p class="kid-code-label">Already have a code? Enter it here:</p>
+                        <form id="code-form" class="code-form">
+                            <input type="text" id="code-input" placeholder="e.g. apple-rocket-dinosaur" autocomplete="off" autocapitalize="none" spellcheck="false">
+                            <button type="submit" class="code-btn">Go</button>
+                        </form>
+                        <p id="code-error" class="code-error hidden"></p>
+                    </div>
+                </div>
+            </section>
+
+            <script>
+                document.getElementById('code-form').addEventListener('submit', async (e) => {
+                    e.preventDefault();
+                    const code = document.getElementById('code-input').value.trim().toLowerCase().replace(/\s+/g, '-');
+                    const err = document.getElementById('code-error');
+                    err.classList.add('hidden');
+                    if (!code) return;
+                    try {
+                        const res = await fetch('/setup', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({ code }),
+                        });
+                        if (res.ok) {
+                            window.location.href = '/';
+                        } else {
+                            err.textContent = "That code didn't work. Check the spelling and try again.";
+                            err.classList.remove('hidden');
+                        }
+                    } catch {
+                        err.textContent = 'Something went wrong. Try again.';
+                        err.classList.remove('hidden');
+                    }
+                });
+            </script>
+
+            <section class="how-it-works">
+                <div class="container">
+                    <h2>How it works</h2>
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <h3>Tell us what your child loves</h3>
+                            <p>
+                                Add your child's age and interests. Parkour and
+                                Lego? Chess and nature documentaries? Sit down
+                                together and pick what they're excited about.
+                            </p>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <h3>Our algorithm picks channels which are both fun and enriching</h3>
+                            <p>
+                                We suggest age-appropriate YouTube channels
+                                based on your child's interests. Content that
+                                they'll enjoy, but with guardrails. You can
+                                review every one and approve or reject.
+                            </p>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <h3>They get their own feed</h3>
+                            <p>
+                                Bookmark their page. No login, no password, no
+                                account. Just the types of videos you've
+                                approved.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="site-footer">
+            <div class="container">
+                <p>YourTube is undergoing beta testing. Please send feedback to yourtube@postquantum.space</p>
+            </div>
+        </footer>
+    </body>
+</html>

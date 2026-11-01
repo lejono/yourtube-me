@@ -1,0 +1,40 @@
+# Dependencies
+node_modules/
+
+# Environment / secrets
+.env
+.env.local
+.env.*.local
+
+# Runtime data — every file under data/ is user state, never committed.
+# Exception: docs/README might exist for structure documentation.
+data/*.json
+data/*/
+
+# Dev tooling
+.mcp.json
+.storkit/
+.storkit_port
+.playwright-mcp/
+logs/
+tmp/
+test-data-*/
+
+# Generated screenshots
+*.png
+
+# Outreach / private drafts
+docs/outreach/
+
+# Misc
+store.json
+CLAUDE.md
+HANDOVER.md
+
+# Local databases and editor backups
+*.sqlite
+*.sqlite-*
+*.backup
+
+# Internal handover notes (name real families)
+docs/handover-*.md

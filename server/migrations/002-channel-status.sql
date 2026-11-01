@@ -1,0 +1,11 @@
+ALTER TABLE channels ADD COLUMN status TEXT NOT NULL DEFAULT 'approved';
+ALTER TABLE channels ADD COLUMN reason TEXT;
+ALTER TABLE channels ADD COLUMN source TEXT NOT NULL DEFAULT 'manual';
+ALTER TABLE kids ADD COLUMN channels_status TEXT NOT NULL DEFAULT 'idle';
+CREATE TABLE feedback (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  kid_id TEXT NOT NULL REFERENCES kids(id) ON DELETE CASCADE,
+  message TEXT NOT NULL,
+  processed INTEGER NOT NULL DEFAULT 0,
+  created_at TEXT NOT NULL DEFAULT (datetime('now'))
+);

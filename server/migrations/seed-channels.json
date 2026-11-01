@@ -1,0 +1,2475 @@
+[
+  {
+    "channel_id": "UCY1kMZp36IQSyNx_9h4mpCg",
+    "title": "Mark Rober",
+    "description": "Former NASA engineer turned YouTuber building epic science experiments and engineering challenges.",
+    "interests": [
+      "science",
+      "engineering"
+    ],
+    "age_min": 7,
+    "age_max": 14,
+    "quality": "verified",
+    "source": "parent-signal"
+  },
+  {
+    "channel_id": "UCRijo3ddMTht_IHyNSNXpNQ",
+    "title": "Dude Perfect",
+    "description": "Five friends pulling off insane trick shots, sports stunts, and comedy challenges.",
+    "interests": [
+      "sports",
+      "comedy"
+    ],
+    "age_min": 8,
+    "age_max": 15,
+    "quality": "verified",
+    "source": "parent-signal"
+  },
+  {
+    "channel_id": "UCR9Gcq0CMm6YgTzsDxAxjOQ",
+    "title": "Grian",
+    "description": "Creative Minecraft builder known for large-scale builds and the long-running Hermitcraft series.",
+    "interests": [
+      "minecraft",
+      "gaming"
+    ],
+    "age_min": 6,
+    "age_max": 13,
+    "quality": "verified",
+    "source": "parent-signal"
+  },
+  {
+    "channel_id": "UC4PooiX37Pld1T8J5SYT-SQ",
+    "title": "Good Mythical Morning",
+    "description": "Rhett and Link taste weird foods, play games, and explore pop culture in their daily talk show.",
+    "interests": [
+      "comedy",
+      "science"
+    ],
+    "age_min": 10,
+    "age_max": 16,
+    "quality": "researched",
+    "source": "parent-signal"
+  },
+  {
+    "channel_id": "UCj1VqrHhDte54oLgPG4xpuQ",
+    "title": "Stuff Made Here",
+    "description": "Mechanical engineer builds impossibly complex custom machines and sports-training gadgets.",
+    "interests": [
+      "engineering",
+      "science"
+    ],
+    "age_min": 9,
+    "age_max": 16,
+    "quality": "verified",
+    "source": "parent-signal"
+  },
+  {
+    "channel_id": "UCsXVk37bltHxD1rDPwtNM8Q",
+    "title": "Kurzgesagt \u2013 In a Nutshell",
+    "description": "Beautifully animated explainers on science, space, history, and the big questions of existence.",
+    "interests": [
+      "science",
+      "space",
+      "nature",
+      "history"
+    ],
+    "age_min": 8,
+    "age_max": 16,
+    "quality": "verified",
+    "source": "parent-signal"
+  },
+  {
+    "channel_id": "UChFur_NwVSbUozOcF_F2kMg",
+    "title": "MumboJumbo",
+    "description": "Minecraft redstone wizard and Hermitcraft regular who builds elaborate automated contraptions.",
+    "interests": [
+      "minecraft",
+      "gaming",
+      "engineering"
+    ],
+    "age_min": 8,
+    "age_max": 14,
+    "quality": "verified",
+    "source": "parent-signal"
+  },
+  {
+    "channel_id": "UCJLZe_NoiG0hT7QCX_9vmqw",
+    "title": "I Did A Thing",
+    "description": "Australian comedian builds absurd contraptions and pranks himself with increasingly chaotic ideas.",
+    "interests": [
+      "engineering",
+      "comedy"
+    ],
+    "age_min": 10,
+    "age_max": 16,
+    "quality": "researched",
+    "source": "parent-signal"
+  },
+  {
+    "channel_id": "UC6nSFpj9HTCZ5t-N3Rm3-HA",
+    "title": "Vsauce",
+    "description": "Michael Stevens digs into mind-bending questions at the edges of science, math, and philosophy.",
+    "interests": [
+      "science",
+      "math"
+    ],
+    "age_min": 10,
+    "age_max": 16,
+    "quality": "verified",
+    "source": "parent-signal"
+  },
+  {
+    "channel_id": "UCHnyfMqiRRG1u-2MsSQLbXA",
+    "title": "Veritasium",
+    "description": "Derek Muller explores counterintuitive science, from viral physics demos to engineering history.",
+    "interests": [
+      "science",
+      "engineering"
+    ],
+    "age_min": 10,
+    "age_max": 16,
+    "quality": "verified",
+    "source": "parent-signal"
+  },
+  {
+    "channel_id": "UCsooa4yRKGN_zEE8iknghZA",
+    "title": "TED-Ed",
+    "description": "Short animated lessons on science, history, literature, and art from expert educators.",
+    "interests": [
+      "science",
+      "history",
+      "art"
+    ],
+    "age_min": 9,
+    "age_max": 16,
+    "quality": "verified",
+    "source": "parent-signal"
+  },
+  {
+    "channel_id": "UCNIuvl7V8zACPpTmmNIqP2A",
+    "title": "OverSimplified",
+    "description": "Hilarious, fast-paced animated retellings of major events in world history.",
+    "interests": [
+      "history"
+    ],
+    "age_min": 9,
+    "age_max": 16,
+    "quality": "verified",
+    "source": "parent-signal"
+  },
+  {
+    "channel_id": "UCZYTClx2T1of7BRZ86-8fow",
+    "title": "SciShow",
+    "description": "Fast, accessible science videos covering everything from animal behaviour to cutting-edge research.",
+    "interests": [
+      "science"
+    ],
+    "age_min": 10,
+    "age_max": 16,
+    "quality": "verified",
+    "source": "parent-signal"
+  },
+  {
+    "channel_id": "UCEIwxahdLz7bap-VDs9h35A",
+    "title": "Steve Mould",
+    "description": "Science communicator who explains surprising physics and engineering phenomena with hands-on demos.",
+    "interests": [
+      "science",
+      "engineering"
+    ],
+    "age_min": 9,
+    "age_max": 16,
+    "quality": "verified",
+    "source": "parent-signal"
+  },
+  {
+    "channel_id": "UC5f5IV0Bf79YLp_p9nfInRA",
+    "title": "How Ridiculous",
+    "description": "Australian trio drops things from extreme heights and attempts record-breaking trick shots.",
+    "interests": [
+      "sports",
+      "comedy",
+      "science"
+    ],
+    "age_min": 8,
+    "age_max": 15,
+    "quality": "researched",
+    "source": "parent-signal"
+  },
+  {
+    "channel_id": "UCnCikd0s4i9KoDtaHPlK-JA",
+    "title": "Primitive Technology",
+    "description": "Wordless videos building shelters, tools, and kilns from scratch using only materials found in the wild.",
+    "interests": [
+      "engineering",
+      "nature"
+    ],
+    "age_min": 8,
+    "age_max": 16,
+    "quality": "verified",
+    "source": "parent-signal"
+  },
+  {
+    "channel_id": "UCBa659QWEk1AI4Tg--mrJ2A",
+    "title": "Tom Scott",
+    "description": "Visits the world's strangest and most interesting places to explain the geography, science, or history behind them.",
+    "interests": [
+      "science",
+      "history",
+      "geography"
+    ],
+    "age_min": 10,
+    "age_max": 16,
+    "quality": "verified",
+    "source": "parent-signal"
+  },
+  {
+    "channel_id": "UCoxcjq-8xIDTYp3uz647V5A",
+    "title": "Numberphile",
+    "description": "Mathematicians explain fascinating numbers, theorems, and unsolved problems on scraps of brown paper.",
+    "interests": [
+      "math"
+    ],
+    "age_min": 10,
+    "age_max": 16,
+    "quality": "verified",
+    "source": "parent-signal"
+  },
+  {
+    "channel_id": "UCSju5G2aFaWMqn-_0YBtq5A",
+    "title": "Stand-up Maths",
+    "description": "Matt Parker finds the comedy in maths mistakes, puzzles, and elegantly wrong answers.",
+    "interests": [
+      "math",
+      "comedy"
+    ],
+    "age_min": 10,
+    "age_max": 16,
+    "quality": "verified",
+    "source": "parent-signal"
+  },
+  {
+    "channel_id": "UCp68_FLety0O-n9QU6phsgw",
+    "title": "CGP Grey",
+    "description": "Precise, well-researched animations explaining complex systems in politics, geography, and society.",
+    "interests": [
+      "science",
+      "history",
+      "geography"
+    ],
+    "age_min": 10,
+    "age_max": 16,
+    "quality": "verified",
+    "source": "parent-signal"
+  },
+  {
+    "channel_id": "UCJ0-OtVpF0wOKEqT2Z1HEtA",
+    "title": "ElectroBOOM",
+    "description": "Electrical engineer explains electronics and physics while deliberately (and safely) shocking himself.",
+    "interests": [
+      "engineering",
+      "science",
+      "comedy"
+    ],
+    "age_min": 10,
+    "age_max": 16,
+    "quality": "verified",
+    "source": "parent-signal"
+  },
+  {
+    "channel_id": "UCQHX6ViZmPsWiYSFAyS0a3Q",
+    "title": "GothamChess",
+    "description": "International Master Levy Rozman teaches chess and reacts to famous games with sharp commentary.",
+    "interests": [
+      "chess"
+    ],
+    "age_min": 8,
+    "age_max": 16,
+    "quality": "verified",
+    "source": "parent-signal"
+  },
+  {
+    "channel_id": "UCj_-bWUM8fK-PEQCNFwWq8w",
+    "title": "ChessKid",
+    "description": "Chess.com's kid-focused channel teaching chess fundamentals through puzzles and friendly lessons.",
+    "interests": [
+      "chess"
+    ],
+    "age_min": 6,
+    "age_max": 13,
+    "quality": "verified",
+    "source": "parent-signal"
+  },
+  {
+    "channel_id": "UCOOw_13nkOTxEv-ZI3Hg0SQ",
+    "title": "Bob Reese",
+    "description": "Parkour athlete and comedian films creative freerunning challenges and stunts around the world.",
+    "interests": [
+      "comedy",
+      "parkour"
+    ],
+    "age_min": 8,
+    "age_max": 14,
+    "quality": "researched",
+    "source": "parent-signal"
+  },
+  {
+    "channel_id": "UCVc6AHfGw9b2zOE_ZGfmsnw",
+    "title": "Make Anything",
+    "description": "3D printing artist creates intricate sculptures and objects, teaching design thinking along the way.",
+    "interests": [
+      "engineering",
+      "art",
+      "crafts"
+    ],
+    "age_min": 9,
+    "age_max": 16,
+    "quality": "researched",
+    "source": "parent-signal"
+  },
+  {
+    "channel_id": "UCs4aHmggTfFrpkPcWSaBN9g",
+    "title": "Up and Atom",
+    "description": "Jade Tan-Holmes makes quantum physics and mathematics genuinely accessible with clear visual explanations.",
+    "interests": [
+      "science",
+      "math"
+    ],
+    "age_min": 10,
+    "age_max": 16,
+    "quality": "researched",
+    "source": "parent-signal"
+  },
+  {
+    "channel_id": "UCq4qiifOaFGW3a2oljSfxUg",
+    "title": "Half-Asleep Chris",
+    "description": "Deadpan travel and geography videos exploring unusual places, history, and the world's forgotten corners.",
+    "interests": [
+      "art",
+      "animation",
+      "crafts"
+    ],
+    "age_min": 8,
+    "age_max": 16,
+    "quality": "verified",
+    "source": "parent-signal"
+  },
+  {
+    "channel_id": "UCXy10-NEFGxQ3b4NVrzHw1Q",
+    "title": "Eric Rosen",
+    "description": "International Master known for the Stafford Gambit who teaches creative and tricky chess openings.",
+    "interests": [
+      "chess"
+    ],
+    "age_min": 9,
+    "age_max": 16,
+    "quality": "verified",
+    "source": "parent-signal"
+  },
+  {
+    "channel_id": "UCL5YbN5WLFD8dLIegT5QAbA",
+    "title": "Agadmator",
+    "description": "Antonio Radic breaks down famous and historical chess games with calm, detailed commentary.",
+    "interests": [
+      "chess"
+    ],
+    "age_min": 10,
+    "age_max": 16,
+    "quality": "verified",
+    "source": "parent-signal"
+  },
+  {
+    "channel_id": "UCqFMzb-4AUf6WAIbl132QKA",
+    "title": "NHL",
+    "description": "Official NHL channel with highlights, goals, and behind-the-scenes hockey content.",
+    "interests": [
+      "hockey",
+      "sports"
+    ],
+    "age_min": 8,
+    "age_max": 16,
+    "quality": "verified",
+    "source": "parent-signal"
+  },
+  {
+    "channel_id": "UClsFdM0HzTdF1JYoraQ0aUw",
+    "title": "Brick Experiment Channel",
+    "description": "Silent, satisfying Lego engineering experiments testing limits, forces, and mechanical designs.",
+    "interests": [
+      "lego",
+      "engineering",
+      "science"
+    ],
+    "age_min": 7,
+    "age_max": 14,
+    "quality": "verified",
+    "source": "parent-signal"
+  },
+  {
+    "channel_id": "UC6107grRI4m0o2-emgoDnAA",
+    "title": "SmarterEveryDay",
+    "description": "Destin Sandlin uses high-speed cameras and engineering curiosity to explore how things really work.",
+    "interests": [
+      "science",
+      "engineering"
+    ],
+    "age_min": 9,
+    "age_max": 16,
+    "quality": "verified",
+    "source": "parent-signal"
+  },
+  {
+    "channel_id": "UCYO_jab_esuFRV4b17AJtAw",
+    "title": "3Blue1Brown",
+    "description": "Grant Sanderson makes stunning animated explanations of higher mathematics feel intuitive and beautiful.",
+    "interests": [
+      "math"
+    ],
+    "age_min": 12,
+    "age_max": 16,
+    "quality": "verified",
+    "source": "parent-signal"
+  },
+  {
+    "channel_id": "UCvZe6ZCbF9xgbbbdkiodPKQ",
+    "title": "Baumgartner Restoration",
+    "description": "Professional conservator Julian Baumgartner carefully restores damaged and aged paintings step by step.",
+    "interests": [
+      "art",
+      "crafts"
+    ],
+    "age_min": 10,
+    "age_max": 16,
+    "quality": "verified",
+    "source": "parent-signal"
+  },
+  {
+    "channel_id": "UCj5i58mCkAREDqFWlhaQbOw",
+    "title": "Stampylonghead",
+    "description": "Stampy Cat's friendly Minecraft adventures and mini-games in his Lovely World, made for younger players.",
+    "interests": [
+      "minecraft",
+      "gaming"
+    ],
+    "age_min": 5,
+    "age_max": 12,
+    "quality": "researched",
+    "source": "researched"
+  },
+  {
+    "channel_id": "UCS5Oz6CHmeoF7vSad0qqXfw",
+    "title": "DanTDM",
+    "description": "Dan TDM plays Minecraft, Roblox, and popular games with an energetic, family-friendly style.",
+    "interests": [
+      "minecraft",
+      "gaming"
+    ],
+    "age_min": 7,
+    "age_max": 13,
+    "quality": "researched",
+    "source": "researched"
+  },
+  {
+    "channel_id": "UCJZam2u1G0syq3kyqrCXrNw",
+    "title": "PrestonPlayz",
+    "description": "Preston plays Minecraft, Roblox, and challenges with an enthusiastic style popular with tweens.",
+    "interests": [
+      "minecraft",
+      "gaming",
+      "parkour"
+    ],
+    "age_min": 7,
+    "age_max": 13,
+    "quality": "researched",
+    "source": "researched"
+  },
+  {
+    "channel_id": "UChGJGhZ9SOOHvBB0Y4DOO_w",
+    "title": "Ryan's World",
+    "description": "Ryan unboxes toys, does science experiments, and plays games aimed at very young children.",
+    "interests": [
+      "science",
+      "comedy"
+    ],
+    "age_min": 3,
+    "age_max": 7,
+    "quality": "researched",
+    "source": "researched"
+  },
+  {
+    "channel_id": "UCRFIPG2u1DxKLNuE3y2SjHA",
+    "title": "SciShow Kids",
+    "description": "Quick, cheerful science videos answering the questions young kids actually ask about the world.",
+    "interests": [
+      "science"
+    ],
+    "age_min": 5,
+    "age_max": 10,
+    "quality": "researched",
+    "source": "researched"
+  },
+  {
+    "channel_id": "UCPlwvN0w4qFSP1FllALB92w",
+    "title": "Numberblocks",
+    "description": "Animated number characters help very young children build deep intuitions about how numbers work.",
+    "interests": [
+      "math"
+    ],
+    "age_min": 3,
+    "age_max": 6,
+    "quality": "researched",
+    "source": "researched"
+  },
+  {
+    "channel_id": "UCoookXUzPciGrEZEXmh4Jjg",
+    "title": "Sesame Street",
+    "description": "The beloved classic teaches letters, numbers, and social skills to toddlers through songs and puppets.",
+    "interests": [
+      "reading",
+      "math",
+      "music"
+    ],
+    "age_min": 2,
+    "age_max": 5,
+    "quality": "verified",
+    "source": "researched"
+  },
+  {
+    "channel_id": "UCTHDPeOUn0xGxsKv6j_-oZQ",
+    "title": "Blippi",
+    "description": "Blippi visits farms, museums, and playgrounds to teach toddlers about the world through exploration.",
+    "interests": [
+      "science",
+      "nature"
+    ],
+    "age_min": 2,
+    "age_max": 5,
+    "quality": "researched",
+    "source": "researched"
+  },
+  {
+    "channel_id": "UCP-Ng5SXUEt0VE-TXqRdL6g",
+    "title": "LEGO",
+    "description": "Official LEGO channel with set reveals, building inspiration, stop-motion animations, and challenges.",
+    "interests": [
+      "lego"
+    ],
+    "age_min": 5,
+    "age_max": 12,
+    "quality": "verified",
+    "source": "researched"
+  },
+  {
+    "channel_id": "UC3hGM2kxOs8vRYCcvfH6vuw",
+    "title": "Mister Maker",
+    "description": "BBC arts and crafts show teaching young children to make fun things from everyday household materials.",
+    "interests": [
+      "art",
+      "crafts"
+    ],
+    "age_min": 3,
+    "age_max": 8,
+    "quality": "researched",
+    "source": "researched"
+  },
+  {
+    "channel_id": "UCXSBK9W8BrIwPsZ1xN70JPg",
+    "title": "I'm A Dinosaur",
+    "description": "Friendly animated dinosaurs teach young children facts about prehistoric creatures and the natural world.",
+    "interests": [
+      "dinosaurs",
+      "nature",
+      "animals"
+    ],
+    "age_min": 3,
+    "age_max": 8,
+    "quality": "researched",
+    "source": "researched"
+  },
+  {
+    "channel_id": "UCn_ancn0S-mkGyn3bn3f8XA",
+    "title": "Dinosaur Train Official",
+    "description": "PBS Kids show following a pteranodon family riding a time-travelling train to meet different dinosaurs.",
+    "interests": [
+      "dinosaurs",
+      "nature"
+    ],
+    "age_min": 3,
+    "age_max": 7,
+    "quality": "researched",
+    "source": "researched"
+  },
+  {
+    "channel_id": "UCzYfz8uibvnB7Yc1LjePi4g",
+    "title": "Aphmau",
+    "description": "Story-driven Minecraft roleplay series with custom characters, drama, and a strong narrative arc.",
+    "interests": [
+      "minecraft",
+      "gaming",
+      "animation"
+    ],
+    "age_min": 7,
+    "age_max": 12,
+    "quality": "researched",
+    "source": "researched"
+  },
+  {
+    "channel_id": "UCWrYq18mdNMkU44WcWGqNtw",
+    "title": "Brick Builder",
+    "description": "Creative Lego builds and stop-motion animations showcasing impressive MOC construction techniques.",
+    "interests": [
+      "lego"
+    ],
+    "age_min": 5,
+    "age_max": 12,
+    "quality": "researched",
+    "source": "researched"
+  },
+  {
+    "channel_id": "UC57y8_BVuW2wXNrxJV23dag",
+    "title": "LEGO Masters",
+    "description": "Competition series where talented Lego builders face creative challenges judged by professional brick artists.",
+    "interests": [
+      "lego",
+      "engineering"
+    ],
+    "age_min": 7,
+    "age_max": 14,
+    "quality": "researched",
+    "source": "researched"
+  },
+  {
+    "channel_id": "UCRMr8jJF0WfNXYnD56kDTOQ",
+    "title": "Art for Kids Hub",
+    "description": "Rob and his kids give simple step-by-step drawing lessons for cartoons and characters children love.",
+    "interests": [
+      "art"
+    ],
+    "age_min": 5,
+    "age_max": 10,
+    "quality": "researched",
+    "source": "researched"
+  },
+  {
+    "channel_id": "UCX6b17PVsYBQ0ip5gyeme-Q",
+    "title": "Crash Course",
+    "description": "Hank and John Green lead a team of educators through fast, deep-dive courses on science, history, and more.",
+    "interests": [
+      "science",
+      "history"
+    ],
+    "age_min": 10,
+    "age_max": 16,
+    "quality": "researched",
+    "source": "researched"
+  },
+  {
+    "channel_id": "UCONtPx56PSebXJOxbFv-2jQ",
+    "title": "Crash Course Kids",
+    "description": "Stefanie co-presents kid-friendly Crash Course covering earth science and physical science for tweens.",
+    "interests": [
+      "science"
+    ],
+    "age_min": 8,
+    "age_max": 12,
+    "quality": "researched",
+    "source": "researched"
+  },
+  {
+    "channel_id": "UCeiYXex_fwgYDonaTcSIk6w",
+    "title": "MinuteEarth",
+    "description": "Short hand-drawn animations explaining environmental science, ecology, and Earth's natural systems.",
+    "interests": [
+      "science",
+      "nature"
+    ],
+    "age_min": 8,
+    "age_max": 14,
+    "quality": "researched",
+    "source": "researched"
+  },
+  {
+    "channel_id": "UCXVCgDuD_QCkI7gTKU7-tpg",
+    "title": "National Geographic Kids",
+    "description": "Nat Geo's kid-focused channel packed with animal facts, nature documentaries, and explorer stories.",
+    "interests": [
+      "nature",
+      "animals",
+      "geography"
+    ],
+    "age_min": 5,
+    "age_max": 12,
+    "quality": "researched",
+    "source": "researched"
+  },
+  {
+    "channel_id": "UCKE0Xnj818IDaHvIcRiq0Bg",
+    "title": "KIDZ BOP",
+    "description": "Kids singing kid-friendly versions of current pop hits, with music videos and dance content.",
+    "interests": [
+      "music"
+    ],
+    "age_min": 5,
+    "age_max": 12,
+    "quality": "researched",
+    "source": "researched"
+  },
+  {
+    "channel_id": "UC4a-Gbdw7vOaccHmFo40b9g",
+    "title": "Khan Academy",
+    "description": "Sal Khan's comprehensive free educational video library covering maths, science, history, and computing.",
+    "interests": [
+      "math",
+      "science",
+      "history"
+    ],
+    "age_min": 8,
+    "age_max": 16,
+    "quality": "verified",
+    "source": "researched"
+  },
+  {
+    "channel_id": "UCfPyVJEBD7Di1YYjTdS2v8g",
+    "title": "Homeschool Pop",
+    "description": "Short, catchy educational videos covering core school topics with songs and animations for young learners.",
+    "interests": [
+      "science",
+      "history",
+      "geography"
+    ],
+    "age_min": 5,
+    "age_max": 9,
+    "quality": "researched",
+    "source": "researched"
+  },
+  {
+    "channel_id": "UCkM6luGCS5C4MnB8OZBO-Hg",
+    "title": "PBS Kids",
+    "description": "Clips and full episodes from PBS educational shows teaching reading, science, and social skills to young children.",
+    "interests": [
+      "science",
+      "reading"
+    ],
+    "age_min": 4,
+    "age_max": 8,
+    "quality": "verified",
+    "source": "researched"
+  },
+  {
+    "channel_id": "UCMmp7pCq1YFOXaRwFBol5uA",
+    "title": "Ms. Rachel",
+    "description": "Rachel Griffin Accurso uses songs, speech therapy techniques, and warm storytelling to help toddlers talk.",
+    "interests": [
+      "reading",
+      "music",
+      "languages"
+    ],
+    "age_min": 1,
+    "age_max": 4,
+    "quality": "researched",
+    "source": "researched"
+  },
+  {
+    "channel_id": "UCLsooMJoIpl_7ux2jvdPB-Q",
+    "title": "Super Simple Songs",
+    "description": "Simple, catchy nursery rhymes and children's songs with bright animations for babies and toddlers.",
+    "interests": [
+      "music"
+    ],
+    "age_min": 1,
+    "age_max": 4,
+    "quality": "researched",
+    "source": "researched"
+  },
+  {
+    "channel_id": "UCCODtTcd5M1JavPCOr_Uydg",
+    "title": "Extra Credits",
+    "description": "Thoughtful essays on game design, history, and society through the lens of video game culture.",
+    "interests": [
+      "history",
+      "gaming"
+    ],
+    "age_min": 11,
+    "age_max": 16,
+    "quality": "researched",
+    "source": "researched"
+  },
+  {
+    "channel_id": "UC3dEvA1is6-0_yuei9iCdEw",
+    "title": "Draw So Cute",
+    "description": "Gentle step-by-step drawing tutorials that make it easy for younger children to create recognisable characters and objects.",
+    "interests": [
+      "art",
+      "crafts"
+    ],
+    "age_min": 5,
+    "age_max": 12,
+    "quality": "researched",
+    "source": "deep-research"
+  },
+  {
+    "channel_id": "UCjjRFKvjpU1L1eDmfBWcqig",
+    "title": "Red Ted Art",
+    "description": "Family craft channel with clear paper, seasonal, and simple STEM-adjacent projects that reward making rather than passive watching.",
+    "interests": [
+      "art",
+      "crafts"
+    ],
+    "age_min": 5,
+    "age_max": 12,
+    "quality": "researched",
+    "source": "deep-research"
+  },
+  {
+    "channel_id": "UC3gFIMCLhcZkEOhbGOdDl9w",
+    "title": "Easy Peasy and Fun",
+    "description": "Short, calm craft videos suited to younger children with ordinary household materials.",
+    "interests": [
+      "art",
+      "crafts"
+    ],
+    "age_min": 4,
+    "age_max": 10,
+    "quality": "researched",
+    "source": "deep-research"
+  },
+  {
+    "channel_id": "UCYAB7hh1ohA8-iX54EpMdeA",
+    "title": "Moriah Elizabeth",
+    "description": "Engaging craft-and-art entertainment that pushes children to make things themselves. Occasional mild humour.",
+    "interests": [
+      "art",
+      "crafts",
+      "comedy"
+    ],
+    "age_min": 8,
+    "age_max": 14,
+    "quality": "researched",
+    "source": "deep-research"
+  },
+  {
+    "channel_id": "UCbKWv2x9t6u8yZoB3KcPtnw",
+    "title": "Alan Becker",
+    "description": "High-quality animated storytelling built around creativity, problem-solving, and Minecraft-flavoured visual humour.",
+    "interests": [
+      "animation",
+      "minecraft",
+      "gaming"
+    ],
+    "age_min": 8,
+    "age_max": 14,
+    "quality": "researched",
+    "source": "deep-research"
+  },
+  {
+    "channel_id": "UCmkP178NasnhR3TWQyyP4Gw",
+    "title": "How To Mechatronics",
+    "description": "Real builds, robotics, CNC, and 3D-printing projects for older kids and teens comfortable with supervised maker content.",
+    "interests": [
+      "engineering",
+      "coding",
+      "robots"
+    ],
+    "age_min": 12,
+    "age_max": 16,
+    "quality": "researched",
+    "source": "deep-research"
+  },
+  {
+    "channel_id": "UCc-4urZUHqwiTYKCGYW_DXg",
+    "title": "America's Test Kitchen Kids",
+    "description": "Science-backed recipes tested by thousands of kids, combining fun with food science.",
+    "interests": [
+      "cooking",
+      "science"
+    ],
+    "age_min": 6,
+    "age_max": 12,
+    "quality": "researched",
+    "source": "web-research"
+  },
+  {
+    "channel_id": "UCOe7qG0hbIcBFanuvooVw-A",
+    "title": "Brain Games & Puzzles",
+    "description": "Spot-the-difference, emoji games, find-the-odd-one-out, and visual quizzes.",
+    "interests": [
+      "puzzles"
+    ],
+    "age_min": 6,
+    "age_max": 14,
+    "quality": "researched",
+    "source": "web-research"
+  },
+  {
+    "channel_id": "UCTRxnMudmOGNw0g4gZf5D8g",
+    "title": "Logically Yours",
+    "description": "Animated logical puzzles, lateral thinking challenges, and brain teasers.",
+    "interests": [
+      "puzzles",
+      "math"
+    ],
+    "age_min": 8,
+    "age_max": 16,
+    "quality": "researched",
+    "source": "web-research"
+  },
+  {
+    "channel_id": "UCHqvNGRj2A7fUjT1JJo5LEw",
+    "title": "Magic Tricks For Kids",
+    "description": "Professional magician teaches easy magic tricks children can learn and perform.",
+    "interests": [
+      "magic"
+    ],
+    "age_min": 5,
+    "age_max": 14,
+    "quality": "researched",
+    "source": "web-research"
+  },
+  {
+    "channel_id": "UCebMFnw6WxozGmqGekJHOJg",
+    "title": "Free School",
+    "description": "Astronomy, space, nature, and history playlists with clear explanations for younger viewers.",
+    "interests": [
+      "space",
+      "science",
+      "history",
+      "nature"
+    ],
+    "age_min": 5,
+    "age_max": 13,
+    "quality": "researched",
+    "source": "web-research"
+  },
+  {
+    "channel_id": "UC6COuR-qwl4HJZWcA4ejLsQ",
+    "title": "Leo the Truck",
+    "description": "Animated truck and vehicle adventures for toddlers and young children.",
+    "interests": [
+      "vehicles"
+    ],
+    "age_min": 2,
+    "age_max": 6,
+    "quality": "researched",
+    "source": "web-research"
+  },
+  {
+    "channel_id": "UCZ7mNzYvoUijQQQVO-0aU5w",
+    "title": "Axel Trucks",
+    "description": "Construction trucks, monster trucks, race cars, and emergency vehicles with toy play.",
+    "interests": [
+      "vehicles"
+    ],
+    "age_min": 3,
+    "age_max": 8,
+    "quality": "researched",
+    "source": "web-research"
+  },
+  {
+    "channel_id": "UCNaPQ5uLX5iIEHUCLmfAgKg",
+    "title": "KidsCanCode",
+    "description": "Python game development with Pygame library, from beginner to intermediate.",
+    "interests": [
+      "coding",
+      "gaming"
+    ],
+    "age_min": 8,
+    "age_max": 16,
+    "quality": "researched",
+    "source": "web-research"
+  },
+  {
+    "channel_id": "UCawsI_mlmPA7Cfld-qZhBQA",
+    "title": "Griffpatch",
+    "description": "Fun Scratch coding tutorials teaching kids to build platformers, shooters, and physics games.",
+    "interests": [
+      "coding",
+      "gaming"
+    ],
+    "age_min": 7,
+    "age_max": 14,
+    "quality": "researched",
+    "source": "web-research"
+  },
+  {
+    "channel_id": "UCAxW1XT0iEJo0TYlRfn6rYQ",
+    "title": "Joe Wicks (The Body Coach)",
+    "description": "Free workout sessions for kids and families with high-energy, fun exercises.",
+    "interests": [
+      "sports",
+      "yoga-mindfulness"
+    ],
+    "age_min": 4,
+    "age_max": 14,
+    "quality": "researched",
+    "source": "web-research"
+  },
+  {
+    "channel_id": "UC8I-UIlXPNS4luC4iV7dRdQ",
+    "title": "Monde des Titounis",
+    "description": "Massive French channel with stories, songs, dances, and educational videos for young children.",
+    "interests": [
+      "languages",
+      "music"
+    ],
+    "age_min": 2,
+    "age_max": 8,
+    "quality": "researched",
+    "source": "web-research"
+  },
+  {
+    "channel_id": "UC2IErW2_erRVY81OVTERvog",
+    "title": "Prof. Bricks",
+    "description": "Robotics engineer with 300+ LEGO models and tutorials for building and programming robots.",
+    "interests": [
+      "robots",
+      "lego",
+      "engineering"
+    ],
+    "age_min": 7,
+    "age_max": 16,
+    "quality": "researched",
+    "source": "web-research"
+  },
+  {
+    "channel_id": "UCvuw_UluXNRPKhqK5GU8SrQ",
+    "title": "LEGO Robotics Mr. Hino",
+    "description": "LEGO Robotics tutorials teaching building, programming, and understanding of LEGO robots.",
+    "interests": [
+      "robots",
+      "lego",
+      "coding"
+    ],
+    "age_min": 6,
+    "age_max": 14,
+    "quality": "researched",
+    "source": "web-research"
+  },
+  {
+    "channel_id": "UCEPsNDUhUm-7yZhUjQQNqwQ",
+    "title": "KidTime StoryTime",
+    "description": "Most-watched reading channel featuring stories with puppets, humor, and vivid storytelling.",
+    "interests": [
+      "reading"
+    ],
+    "age_min": 2,
+    "age_max": 8,
+    "quality": "researched",
+    "source": "web-research"
+  },
+  {
+    "channel_id": "UCGfA6UdZEmpIwBZ4btAKkgA",
+    "title": "Vooks",
+    "description": "Digital library of animated storybooks with read-aloud narration and read-along text.",
+    "interests": [
+      "reading"
+    ],
+    "age_min": 3,
+    "age_max": 9,
+    "quality": "researched",
+    "source": "web-research"
+  },
+  {
+    "channel_id": "UCnBdzaRy-Ky9Vh54XJlFz1Q",
+    "title": "StorylineOnline",
+    "description": "Celebrity-read picture books presented with strong production values and a clear focus on reading fluency, vocabulary and comprehension.",
+    "interests": [
+      "reading"
+    ],
+    "age_min": 5,
+    "age_max": 12,
+    "quality": "researched",
+    "source": "deep-research"
+  },
+  {
+    "channel_id": "UCXRPWm72nrs5sK7fNTSXZrw",
+    "title": "Little Fox - Kids Stories and Songs",
+    "description": "A very strong literacy channel that combines stories, phonics, songs and simple nonfiction in a way that supports both reading and English learning.",
+    "interests": [
+      "reading",
+      "languages",
+      "animals",
+      "nature"
+    ],
+    "age_min": 4,
+    "age_max": 10,
+    "quality": "researched",
+    "source": "deep-research"
+  },
+  {
+    "channel_id": "UCq0EGvLTyy-LLT1oUSO_0FQ",
+    "title": "Eddie Woo",
+    "description": "A superb maths-teaching channel for secondary-age students who benefit from calm, rigorous board-based explanations without hype or gimmicks.",
+    "interests": [
+      "math"
+    ],
+    "age_min": 12,
+    "age_max": 16,
+    "quality": "researched",
+    "source": "deep-research"
+  },
+  {
+    "channel_id": "UCz4tgANd4yy8Oe0iXCdSWfA",
+    "title": "English with Lucy",
+    "description": "A clear and well-produced English-learning channel that works best for older children and teens improving grammar, vocabulary and spoken confidence.",
+    "interests": [
+      "languages"
+    ],
+    "age_min": 11,
+    "age_max": 16,
+    "quality": "researched",
+    "source": "deep-research"
+  },
+  {
+    "channel_id": "UCqcBu0YyEJH4vfKR--97cng",
+    "title": "Easy Languages",
+    "description": "Street-interview language videos that expose older children and teens to real spoken language and cultural context in a clean educational format.",
+    "interests": [
+      "languages",
+      "geography"
+    ],
+    "age_min": 12,
+    "age_max": 16,
+    "quality": "researched",
+    "source": "deep-research"
+  },
+  {
+    "channel_id": "UC56cowXhoqRWHeqfSJkIQaA",
+    "title": "Bounce Patrol - Kids Songs",
+    "description": "High-energy nursery rhymes and movement songs with unusually clear lyrics and a friendly, school-safe presentation for younger children.",
+    "interests": [
+      "music",
+      "comedy"
+    ],
+    "age_min": 3,
+    "age_max": 7,
+    "quality": "researched",
+    "source": "deep-research"
+  },
+  {
+    "channel_id": "UCLy6-72NzYpFztbJ7jNEMkg",
+    "title": "The Kiboomers - Kids Music Channel",
+    "description": "A large library of classroom-friendly songs, brain breaks and holiday tracks that many parents and teachers use for structured sing-alongs.",
+    "interests": [
+      "music",
+      "dance"
+    ],
+    "age_min": 3,
+    "age_max": 8,
+    "quality": "researched",
+    "source": "deep-research"
+  },
+  {
+    "channel_id": "UC3wCAOfSB0W9iuKDDtNJeGw",
+    "title": "Danny Go!",
+    "description": "A lively movement-and-learning show that gets younger children physically active through songs, games and playful educational themes.",
+    "interests": [
+      "music",
+      "dance",
+      "sports"
+    ],
+    "age_min": 3,
+    "age_max": 8,
+    "quality": "researched",
+    "source": "deep-research"
+  },
+  {
+    "channel_id": "UC5vVe2R4ucoMzJP53o38Yaw",
+    "title": "The Wiggles",
+    "description": "A long-established preschool music channel with dependable production standards, strong movement content and very low parental risk.",
+    "interests": [
+      "music",
+      "dance",
+      "comedy"
+    ],
+    "age_min": 2,
+    "age_max": 7,
+    "quality": "researched",
+    "source": "deep-research"
+  },
+  {
+    "channel_id": "UCVzLLZkDuFGAE2BGdBuBNBg",
+    "title": "Bluey - Official Channel",
+    "description": "A high-quality official family animation channel whose play-based stories are funny, emotionally healthy and unusually rich in imaginative modelling.",
+    "interests": [
+      "animation",
+      "comedy"
+    ],
+    "age_min": 3,
+    "age_max": 8,
+    "quality": "researched",
+    "source": "deep-research"
+  },
+  {
+    "channel_id": "UCAOtE1V7Ots4DjM8JLlrYgg",
+    "title": "Peppa Pig - Official Channel",
+    "description": "A heavily moderated official preschool animation channel suitable for younger viewers who enjoy simple routines, characters and short episodic stories.",
+    "interests": [
+      "animation",
+      "comedy"
+    ],
+    "age_min": 3,
+    "age_max": 7,
+    "quality": "researched",
+    "source": "deep-research"
+  },
+  {
+    "channel_id": "UCS7H8U-n5mINVJjJsaRtGHg",
+    "title": "Shaun the Sheep Official",
+    "description": "Wordless comedy animation with strong visual storytelling, making it an easy approval for children who like gentle slapstick without verbal edge.",
+    "interests": [
+      "animation",
+      "comedy"
+    ],
+    "age_min": 4,
+    "age_max": 10,
+    "quality": "researched",
+    "source": "deep-research"
+  },
+  {
+    "channel_id": "UChUHOEe7zgYmrv7a_LlpNng",
+    "title": "Jungle Beat",
+    "description": "An official children\u2019s animation channel built around bright, simple animal adventures that are easy for younger viewers to follow safely.",
+    "interests": [
+      "animation",
+      "comedy",
+      "animals"
+    ],
+    "age_min": 3,
+    "age_max": 8,
+    "quality": "researched",
+    "source": "deep-research"
+  },
+  {
+    "channel_id": "UC1sELGmy5jp5fQUugmuYlXQ",
+    "title": "Minecraft",
+    "description": "The official Minecraft channel is a safer choice than most gameplay creators for children who want builds, updates and community creativity without creator profanity.",
+    "interests": [
+      "minecraft",
+      "gaming"
+    ],
+    "age_min": 7,
+    "age_max": 14,
+    "quality": "researched",
+    "source": "deep-research"
+  },
+  {
+    "channel_id": "UCSayHB-17xcfdc4z7ij5uzQ",
+    "title": "Family Friendly Gaming",
+    "description": "A long-running gaming review channel focused on family-suitable titles, useful for older children and parents who want game coverage without typical gaming-channel swearing.",
+    "interests": [
+      "gaming"
+    ],
+    "age_min": 10,
+    "age_max": 16,
+    "quality": "researched",
+    "source": "deep-research"
+  },
+  {
+    "channel_id": "UCnIrLy19cFV50Eai8Xj-ArA",
+    "title": "Snake Discovery",
+    "description": "An excellent reptile and animal-education channel for older children, with hands-on husbandry content that is fascinating but best suited to viewers comfortable with snakes.",
+    "interests": [
+      "animals",
+      "nature",
+      "science"
+    ],
+    "age_min": 9,
+    "age_max": 16,
+    "quality": "researched",
+    "source": "deep-research"
+  },
+  {
+    "channel_id": "UC-3SbfTPJsL8fJAPKiVqBLg",
+    "title": "Deep Look",
+    "description": "Beautifully shot close-up nature videos that reward curiosity and are especially strong for older children who love insects, marine life and surprising biology.",
+    "interests": [
+      "animals",
+      "nature",
+      "science"
+    ],
+    "age_min": 9,
+    "age_max": 16,
+    "quality": "researched",
+    "source": "deep-research"
+  },
+  {
+    "channel_id": "UCzR-rom72PHN9Zg7RML9EbA",
+    "title": "PBS Eons",
+    "description": "A strong older-kids and teen channel for dinosaurs, evolution and deep-time natural history, presented rigorously without sensationalism.",
+    "interests": [
+      "science",
+      "history",
+      "dinosaurs"
+    ],
+    "age_min": 10,
+    "age_max": 16,
+    "quality": "researched",
+    "source": "deep-research"
+  },
+  {
+    "channel_id": "UCLA_DiR1FfKNvjuUpBHmylQ",
+    "title": "NASA",
+    "description": "The official NASA channel is a dependable choice for space-loving children who want real missions, launches and STEM coverage from a primary source.",
+    "interests": [
+      "space",
+      "science",
+      "engineering"
+    ],
+    "age_min": 8,
+    "age_max": 16,
+    "quality": "researched",
+    "source": "deep-research"
+  },
+  {
+    "channel_id": "UCIBaDdAbGlFDeS33shmlD0A",
+    "title": "European Space Agency, ESA",
+    "description": "An excellent official channel for older children who want serious but accessible coverage of rockets, satellites, astronauts and European space missions.",
+    "interests": [
+      "space",
+      "science",
+      "engineering"
+    ],
+    "age_min": 9,
+    "age_max": 16,
+    "quality": "researched",
+    "source": "deep-research"
+  },
+  {
+    "channel_id": "UC-9b7aDP6ZN0coj9-xFnrtw",
+    "title": "Astrum",
+    "description": "A polished astronomy channel for older children and teens that explains planets, moons and cosmic phenomena without the noise of clickbait-style science content.",
+    "interests": [
+      "space",
+      "science"
+    ],
+    "age_min": 10,
+    "age_max": 16,
+    "quality": "researched",
+    "source": "deep-research"
+  },
+  {
+    "channel_id": "UCYNbYGl89UUowy8oXkipC-Q",
+    "title": "Dr. Becky",
+    "description": "A rigorous but approachable astrophysics channel best for science-minded teens who are ready for accurate explanations rather than simplified spectacle.",
+    "interests": [
+      "space",
+      "science"
+    ],
+    "age_min": 11,
+    "age_max": 16,
+    "quality": "researched",
+    "source": "deep-research"
+  },
+  {
+    "channel_id": "UCKvn9VBLAiLiYL4FFJHri6g",
+    "title": "Pro Football Academy \u2013 The Next Gen of Ballers!",
+    "description": "A football-skills and challenge channel that is notably cleaner than most sports-entertainment creators and can work well for football-obsessed older children.",
+    "interests": [
+      "sports"
+    ],
+    "age_min": 8,
+    "age_max": 16,
+    "quality": "researched",
+    "source": "deep-research"
+  },
+  {
+    "channel_id": "UChd1FPXykD4pust3ljzq6hQ",
+    "title": "Thinknoodles",
+    "description": "A long-running family-friendly gaming creator whose Minecraft and general gameplay videos are easy for parents to approve when they want upbeat, profanity-free entertainment.",
+    "interests": [
+      "minecraft",
+      "gaming"
+    ],
+    "age_min": 6,
+    "age_max": 12,
+    "quality": "researched",
+    "source": "deep-research"
+  },
+  {
+    "channel_id": "UCH4BNI0-FOK2dMXoFtViWHw",
+    "title": "It's Okay To Be Smart",
+    "description": "PBS-backed science explainers that stay curious, visually polished and reliably educational without talking down to older children.",
+    "interests": [
+      "science",
+      "engineering"
+    ],
+    "age_min": 8,
+    "age_max": 14,
+    "quality": "researched",
+    "source": "deep-research"
+  },
+  {
+    "channel_id": "UCbPHHOiWqjj0ta4m7V8u77w",
+    "title": "TheDadLab",
+    "description": "Hands-on home projects and STEM activities that are especially good for parents who want screen time to turn into real-world making and experimenting.",
+    "interests": [
+      "science",
+      "engineering",
+      "crafts"
+    ],
+    "age_min": 5,
+    "age_max": 12,
+    "quality": "researched",
+    "source": "deep-research"
+  },
+  {
+    "channel_id": "UCryGec9PdUCLjpJW2mgCuLw",
+    "title": "NASA Jet Propulsion Laboratory",
+    "description": "A particularly good approval choice for curious tweens and teens who like robotics, Mars missions and how spacecraft are actually built and run.",
+    "interests": [
+      "space",
+      "science",
+      "engineering"
+    ],
+    "age_min": 8,
+    "age_max": 16,
+    "quality": "researched",
+    "source": "deep-research"
+  },
+  {
+    "channel_id": "UC_aP7p621ATY_yAa8jMqUVA",
+    "title": "NASA Video",
+    "description": "Best for older space-focused children who enjoy mission coverage, launch streams and official NASA event footage with minimal fluff.",
+    "interests": [
+      "space",
+      "science",
+      "engineering"
+    ],
+    "age_min": 10,
+    "age_max": 16,
+    "quality": "researched",
+    "source": "deep-research"
+  },
+  {
+    "channel_id": "UCdl3ece6ZfQwsiLbMnh2bCw",
+    "title": "AstroKobi",
+    "description": "Fast-paced but still informative astronomy and space explainers that work well for older children who prefer energetic delivery.",
+    "interests": [
+      "space",
+      "science"
+    ],
+    "age_min": 10,
+    "age_max": 16,
+    "quality": "researched",
+    "source": "deep-research"
+  },
+  {
+    "channel_id": "UCogrSQkBJn1KF0N9I4oM7eQ",
+    "title": "Fraser Cain",
+    "description": "Weekly astronomy-heavy coverage that suits serious space-interested tweens and teens who are ready for deeper but still approachable explanations.",
+    "interests": [
+      "space",
+      "science"
+    ],
+    "age_min": 11,
+    "age_max": 16,
+    "quality": "researched",
+    "source": "deep-research"
+  },
+  {
+    "channel_id": "UC2YBT7HYqCbbvzu3kKZ3wnw",
+    "title": "GoNoodle | Get Moving",
+    "description": "A very strong approval option for younger children because it turns screen time into movement breaks, songs and classroom-friendly energy release.",
+    "interests": [
+      "music",
+      "sports",
+      "dance"
+    ],
+    "age_min": 4,
+    "age_max": 10,
+    "quality": "researched",
+    "source": "deep-research"
+  },
+  {
+    "channel_id": "UCrNRnxyY4zC2KKE9Aos2mPw",
+    "title": "123 Andr\u00e9s",
+    "description": "An excellent bilingual music choice for younger children, mixing catchy songs with language learning in a warm, classroom-friendly style.",
+    "interests": [
+      "music",
+      "languages",
+      "reading"
+    ],
+    "age_min": 3,
+    "age_max": 8,
+    "quality": "researched",
+    "source": "deep-research"
+  },
+  {
+    "channel_id": "UCVcQH8A634mauPrGbWs7QlQ",
+    "title": "Jack Hartmann Kids Music Channel",
+    "description": "Teacher-friendly educational songs for counting, reading and movement, making it a practical approval choice for preschool and early primary ages.",
+    "interests": [
+      "music",
+      "math",
+      "reading",
+      "dance"
+    ],
+    "age_min": 4,
+    "age_max": 8,
+    "quality": "researched",
+    "source": "deep-research"
+  },
+  {
+    "channel_id": "UC8butISFwT-Wl7EV0hUK0BQ",
+    "title": "freeCodeCamp.org",
+    "description": "A superb option for motivated older children and teens who want serious coding instruction from trusted educators rather than hype-driven tech content.",
+    "interests": [
+      "coding",
+      "math",
+      "engineering"
+    ],
+    "age_min": 13,
+    "age_max": 16,
+    "quality": "researched",
+    "source": "deep-research"
+  },
+  {
+    "channel_id": "UC6D1L2vxEAg_Vi0JSxMBDgA",
+    "title": "Dan Rhodes",
+    "description": "21-year-old English magician with 27M subscribers. Quick, relatable magic tricks and illusions \u2014 Common Sense Media approved as genuinely kid-safe.",
+    "interests": [
+      "magic",
+      "comedy"
+    ],
+    "age_min": 6,
+    "age_max": 14,
+    "quality": "researched",
+    "source": "web-research"
+  },
+  {
+    "channel_id": "UCHnj59g7jezwTy5GeL8EA_g",
+    "title": "MindYourDecisions",
+    "description": "Stanford math grad Presh Talwalkar presents brain teasers, logic puzzles, and viral math problems. 3M+ subscribers.",
+    "interests": [
+      "puzzles",
+      "math"
+    ],
+    "age_min": 9,
+    "age_max": 16,
+    "quality": "researched",
+    "source": "web-research"
+  },
+  {
+    "channel_id": "UCkzSfRlJsgK0CaGz_1bghPg",
+    "title": "Tingman",
+    "description": "Australian dad and two kids making wholesome weekly cubing videos. Family-friendly Rubiks cube content.",
+    "interests": [
+      "puzzles"
+    ],
+    "age_min": 6,
+    "age_max": 14,
+    "quality": "researched",
+    "source": "web-research"
+  },
+  {
+    "channel_id": "UCqTVfT9JQqhA6_Hi_h_h97Q",
+    "title": "J Perm",
+    "description": "The most popular Rubiks cube tutorial channel. Clear explanations that have taught millions to solve the cube.",
+    "interests": [
+      "puzzles",
+      "math"
+    ],
+    "age_min": 7,
+    "age_max": 16,
+    "quality": "researched",
+    "source": "web-research"
+  },
+  {
+    "channel_id": "UCo8bcnLyZH8tBIH9V1mLgqQ",
+    "title": "TheOdd1sOut",
+    "description": "Animated storytelling about everyday life. Hugely popular with kids 8-14, clean humour, relatable school stories.",
+    "interests": [
+      "animation",
+      "comedy"
+    ],
+    "age_min": 8,
+    "age_max": 14,
+    "quality": "researched",
+    "source": "web-research"
+  },
+  {
+    "title": "GeminiTay",
+    "channel_id": "UCUBsjvdHcwZd3ztdY1Zadcw",
+    "description": "Friendly Minecraft building and survival videos with a calm tone and strong emphasis on creativity rather than combat.",
+    "age_min": 8,
+    "age_max": 16,
+    "interests": [
+      "minecraft",
+      "gaming",
+      "art"
+    ],
+    "source": "deep-research",
+    "quality": "researched"
+  },
+  {
+    "title": "GoodTimesWithScar",
+    "channel_id": "UCodkNmk9oWRTIYZdr_HuSlg",
+    "description": "Whimsical Minecraft builds and collaborative server episodes that are imaginative, upbeat, and easy for parents to supervise.",
+    "age_min": 8,
+    "age_max": 16,
+    "interests": [
+      "minecraft",
+      "gaming",
+      "art"
+    ],
+    "source": "deep-research",
+    "quality": "researched"
+  },
+  {
+    "title": "SmallishBeans",
+    "channel_id": "UC4qdHN4zHhd4VvNy3zNgXPA",
+    "description": "High-energy but generally family-friendly Minecraft series built around creative building challenges and collaborative play.",
+    "age_min": 8,
+    "age_max": 16,
+    "interests": [
+      "minecraft",
+      "gaming",
+      "comedy"
+    ],
+    "source": "deep-research",
+    "quality": "researched"
+  },
+  {
+    "title": "Pixlriffs",
+    "channel_id": "UCgGjBqZZtAjxfpGSba7d6ww",
+    "description": "One of the best tutorial-first Minecraft channels for children who want to learn systems, survival mechanics, and thoughtful building.",
+    "age_min": 9,
+    "age_max": 16,
+    "interests": [
+      "minecraft",
+      "gaming",
+      "engineering"
+    ],
+    "source": "deep-research",
+    "quality": "researched"
+  },
+  {
+    "title": "Shulkercraft",
+    "channel_id": "UCLdQc5zUbFpM4Y0iKfESDTA",
+    "description": "Minecraft farm and redstone tutorials that reward patient, systems-oriented kids who like practical builds and optimisation.",
+    "age_min": 9,
+    "age_max": 16,
+    "interests": [
+      "minecraft",
+      "gaming",
+      "engineering"
+    ],
+    "source": "deep-research",
+    "quality": "researched"
+  },
+  {
+    "title": "Zaypixel",
+    "channel_id": "UCyKUzAzeTuwxNrZ4AcugbMw",
+    "description": "Quiet, aesthetic Minecraft building tutorials that are especially strong for children who like cosy design and low-stimulation viewing.",
+    "age_min": 7,
+    "age_max": 16,
+    "interests": [
+      "minecraft",
+      "gaming",
+      "art"
+    ],
+    "source": "deep-research",
+    "quality": "researched"
+  },
+  {
+    "title": "Dangthatsalongname",
+    "channel_id": "UCxucf8O8itcmkqu3d7yUavg",
+    "description": "Mostly Minecraft series with accessible humour and collaborative storytelling that fits older children and young teens.",
+    "age_min": 9,
+    "age_max": 16,
+    "interests": [
+      "minecraft",
+      "gaming",
+      "comedy"
+    ],
+    "source": "deep-research",
+    "quality": "researched"
+  },
+  {
+    "title": "Games For Kids Hub",
+    "channel_id": "UCu9MlvKLAt8JNQf5dYda7Aw",
+    "description": "A family-run gaming channel that keeps the tone child-focused and approachable for younger viewers who like Nintendo-style play.",
+    "age_min": 5,
+    "age_max": 11,
+    "interests": [
+      "gaming",
+      "comedy"
+    ],
+    "source": "deep-research",
+    "quality": "researched"
+  },
+  {
+    "title": "CrunchLabs",
+    "channel_id": "UCGyFy3do9yUrPbvUbVci-Ng",
+    "description": "Engineering videos tied to hands-on builds that are especially good for children who want practical STEM rather than passive science viewing.",
+    "age_min": 8,
+    "age_max": 16,
+    "interests": [
+      "science",
+      "engineering"
+    ],
+    "source": "deep-research",
+    "quality": "researched"
+  },
+  {
+    "title": "The Action Lab",
+    "channel_id": "UC1VLQPn9cYSqx8plbk9RxxQ",
+    "description": "Experiment-led science videos that make abstract physics and chemistry visually memorable for curious older children and teens.",
+    "age_min": 10,
+    "age_max": 16,
+    "interests": [
+      "science",
+      "engineering"
+    ],
+    "source": "deep-research",
+    "quality": "researched"
+  },
+  {
+    "title": "TheDadLab",
+    "channel_id": "UCc_-hy0u9-oKlNdMKHBudcQ",
+    "description": "Short DIY science and craft activities designed for families, with clear ideas parents can replicate at home.",
+    "age_min": 4,
+    "age_max": 10,
+    "interests": [
+      "science",
+      "crafts"
+    ],
+    "source": "deep-research",
+    "quality": "researched"
+  },
+  {
+    "title": "Kids Invent Stuff",
+    "channel_id": "UC-glo52BMvZH9PPUamjGIcw",
+    "description": "Engineers build children\u2019s invention ideas on camera, making it one of the strongest creativity-plus-engineering channels for primary-age kids.",
+    "age_min": 4,
+    "age_max": 11,
+    "interests": [
+      "engineering",
+      "science",
+      "crafts"
+    ],
+    "source": "deep-research",
+    "quality": "researched"
+  },
+  {
+    "title": "Animal Wonders Montana",
+    "channel_id": "UC1Nj4gkoi_n5eCcrKCVOXKA",
+    "description": "Gentle animal-care and animal-behaviour videos with a humane, educational approach that works well for younger viewers.",
+    "age_min": 5,
+    "age_max": 12,
+    "interests": [
+      "animals",
+      "nature"
+    ],
+    "source": "deep-research",
+    "quality": "researched"
+  },
+  {
+    "title": "Monterey Bay Aquarium",
+    "channel_id": "UCnM5iMGiKsZg-iOlIO2ZkdQ",
+    "description": "An outstanding official aquarium channel with marine biology, animal care, and ocean literacy content suitable across a broad age range.",
+    "age_min": 5,
+    "age_max": 16,
+    "interests": [
+      "animals",
+      "nature",
+      "science"
+    ],
+    "source": "deep-research",
+    "quality": "researched"
+  },
+  {
+    "title": "Natural History Museum",
+    "channel_id": "UC7zosc8-0T6Dfyo1bg0w7KA",
+    "description": "Museum shorts and explainers that are particularly useful for children interested in fossils, dinosaurs, biodiversity, and Earth science.",
+    "age_min": 7,
+    "age_max": 16,
+    "interests": [
+      "dinosaurs",
+      "nature",
+      "science",
+      "history"
+    ],
+    "source": "deep-research",
+    "quality": "researched"
+  },
+  {
+    "title": "San Diego Zoo",
+    "channel_id": "UCC5NfQ6Mf0dq_eEwv4P_hWA",
+    "description": "A reliable official zoo channel with animal updates, keeper insight, and conservation content that stays squarely parent-approvable.",
+    "age_min": 4,
+    "age_max": 14,
+    "interests": [
+      "animals",
+      "nature"
+    ],
+    "source": "deep-research",
+    "quality": "researched"
+  },
+  {
+    "title": "The Cincinnati Zoo & Botanical Garden",
+    "channel_id": "UCE3VoxyYmyQCReOXk2ogsVg",
+    "description": "Frequent zoo updates and conservation-focused animal videos that are easy for families to dip into safely.",
+    "age_min": 4,
+    "age_max": 14,
+    "interests": [
+      "animals",
+      "nature"
+    ],
+    "source": "deep-research",
+    "quality": "researched"
+  },
+  {
+    "title": "NASA Goddard",
+    "channel_id": "UCAY-SMFNfynqz1bdoaV8BeQ",
+    "description": "A very strong official source for visually compelling astronomy, Earth science, and NASA mission explainers.",
+    "age_min": 9,
+    "age_max": 16,
+    "interests": [
+      "space",
+      "science",
+      "vehicles"
+    ],
+    "source": "deep-research",
+    "quality": "researched"
+  },
+  {
+    "title": "NASA Science",
+    "channel_id": "UCKt6dYzHqHfpcp1lgj4bl1A",
+    "description": "A more focused official NASA channel for children who care about the science behind missions, planets, telescopes, and Earth observations.",
+    "age_min": 10,
+    "age_max": 16,
+    "interests": [
+      "space",
+      "science"
+    ],
+    "source": "deep-research",
+    "quality": "researched"
+  },
+  {
+    "title": "Cool Worlds",
+    "channel_id": "UCGHZpIpAWJQ-Jy_CeCdXhMA",
+    "description": "Thoughtful exoplanet and cosmology videos best suited to scientifically ambitious teens who want more than surface-level facts.",
+    "age_min": 13,
+    "age_max": 16,
+    "interests": [
+      "space",
+      "science"
+    ],
+    "source": "deep-research",
+    "quality": "researched"
+  },
+  {
+    "title": "PBS Space Time",
+    "channel_id": "UC7_gcs09iThXybpVgjHZ_7g",
+    "description": "One of the best advanced-but-clean space and physics channels for mathematically confident older teens.",
+    "age_min": 14,
+    "age_max": 16,
+    "interests": [
+      "space",
+      "science",
+      "math"
+    ],
+    "source": "deep-research",
+    "quality": "researched"
+  },
+  {
+    "title": "Mathologer",
+    "channel_id": "UC1_uAIS3r8Vu6JjXWvastJg",
+    "description": "Beautifully reasoned maths videos for older children who enjoy proofs, patterns, and elegant problem solving.",
+    "age_min": 12,
+    "age_max": 16,
+    "interests": [
+      "math",
+      "puzzles"
+    ],
+    "source": "deep-research",
+    "quality": "researched"
+  },
+  {
+    "title": "Cracking The Cryptic",
+    "channel_id": "UCC-UOdK8-mIjxBQm_ot1T-Q",
+    "description": "The best mainstream logic-puzzle channel for sudoku-loving older children and teens who want deep, non-toxic problem solving.",
+    "age_min": 11,
+    "age_max": 16,
+    "interests": [
+      "math",
+      "puzzles"
+    ],
+    "source": "deep-research",
+    "quality": "researched"
+  },
+  {
+    "title": "Remote Chess Academy",
+    "channel_id": "UCsKZ2yOsgfNxln8xH5WkGvg",
+    "description": "Straightforward chess instruction that is easy to approve for children who want concrete tactical and strategic lessons.",
+    "age_min": 8,
+    "age_max": 16,
+    "interests": [
+      "chess",
+      "math",
+      "puzzles"
+    ],
+    "source": "deep-research",
+    "quality": "researched"
+  },
+  {
+    "title": "Saint Louis Chess Club",
+    "channel_id": "UCM-ONC2bCHytG2mYtKDmIeA",
+    "description": "An excellent tournament and lessons channel for serious young chess players ready for stronger coaching content.",
+    "age_min": 10,
+    "age_max": 16,
+    "interests": [
+      "chess",
+      "math"
+    ],
+    "source": "deep-research",
+    "quality": "researched"
+  },
+  {
+    "title": "Chess.com",
+    "channel_id": "UC5kS0l76kC0xOzMPtOmSFGw",
+    "description": "A broad, active chess-learning channel with lessons, puzzles, and event coverage that suits older children already interested in the game.",
+    "age_min": 9,
+    "age_max": 16,
+    "interests": [
+      "chess",
+      "math",
+      "puzzles"
+    ],
+    "source": "deep-research",
+    "quality": "researched"
+  },
+  {
+    "title": "blackpenredpen",
+    "channel_id": "UC_SvYP0k05UKiJ_2ndB02IA",
+    "description": "Energetic problem-solving and calculus content for mathematically hungry teens who want lots of examples and challenges.",
+    "age_min": 13,
+    "age_max": 16,
+    "interests": [
+      "math",
+      "puzzles"
+    ],
+    "source": "deep-research",
+    "quality": "researched"
+  },
+  {
+    "title": "PowerPlayChess",
+    "channel_id": "UCMBATpFb--uLNAODOVWvCTA",
+    "description": "Grandmaster Daniel King\u2019s chess channel is a strong choice for older children who enjoy annotated games and serious but calm analysis.",
+    "age_min": 11,
+    "age_max": 16,
+    "interests": [
+      "chess",
+      "math"
+    ],
+    "source": "deep-research",
+    "quality": "researched"
+  },
+  {
+    "title": "Math Songs by NUMBEROCK",
+    "channel_id": "UCt9SZgFExNwWTH5T_JnyF-A",
+    "description": "Catchy, concept-first maths songs that work especially well for primary pupils who learn best through rhythm and repetition.",
+    "age_min": 5,
+    "age_max": 10,
+    "interests": [
+      "math",
+      "music"
+    ],
+    "source": "deep-research",
+    "quality": "researched"
+  },
+  {
+    "title": "Code.org",
+    "channel_id": "UCJyEBMU1xVP2be1-AoGS1BA",
+    "description": "A high-trust nonprofit coding channel with classroom-ready material and a strong bias toward introductory computer science.",
+    "age_min": 7,
+    "age_max": 16,
+    "interests": [
+      "coding"
+    ],
+    "source": "deep-research",
+    "quality": "researched"
+  },
+  {
+    "title": "The Coding Train",
+    "channel_id": "UCvjgXvBlbQiydffZU7m1_aw",
+    "description": "Creative coding lessons with an encouraging tone, good for children who want to make things rather than just watch tutorials.",
+    "age_min": 11,
+    "age_max": 16,
+    "interests": [
+      "coding",
+      "art"
+    ],
+    "source": "deep-research",
+    "quality": "researched"
+  },
+  {
+    "title": "Adafruit Industries",
+    "channel_id": "UCpOlOeQjj7EsVnDh3zuCgsA",
+    "description": "Maker-friendly electronics and physical-computing videos for teenagers moving from coding on-screen to coding with hardware.",
+    "age_min": 12,
+    "age_max": 16,
+    "interests": [
+      "coding",
+      "engineering"
+    ],
+    "source": "deep-research",
+    "quality": "researched"
+  },
+  {
+    "title": "Raspberry Pi",
+    "channel_id": "UCFIjVWFZ__KhtTXHDJ7vgng",
+    "description": "Official Raspberry Pi content covering beginner hardware, programming, and creative computing projects that reward hands-on learners.",
+    "age_min": 10,
+    "age_max": 16,
+    "interests": [
+      "coding",
+      "engineering"
+    ],
+    "source": "deep-research",
+    "quality": "researched"
+  },
+  {
+    "title": "Beyond the Brick",
+    "channel_id": "UCkapkfGuO2LnDpIp8f_p7gA",
+    "description": "The best large Lego showcase channel for children who like imaginative builds, conventions, and advanced model inspiration.",
+    "age_min": 7,
+    "age_max": 16,
+    "interests": [
+      "lego",
+      "engineering",
+      "art"
+    ],
+    "source": "deep-research",
+    "quality": "researched"
+  },
+  {
+    "title": "Cosmic Kids Yoga",
+    "channel_id": "UC5uIZ2KOZZeQDQo_Gsi_qbQ",
+    "description": "Story-led yoga and mindfulness sessions that are exceptionally parent-friendly for younger children who need movement without hype.",
+    "age_min": 3,
+    "age_max": 9,
+    "interests": [
+      "yoga-mindfulness",
+      "sports",
+      "reading"
+    ],
+    "source": "deep-research",
+    "quality": "researched"
+  },
+  {
+    "title": "How To Cook That",
+    "channel_id": "UCsP7Bpw36J666Fct5M8u-ZA",
+    "description": "A high-trust baking and food-science channel from Ann Reardon that is especially easy for parents to approve.",
+    "age_min": 9,
+    "age_max": 16,
+    "interests": [
+      "cooking",
+      "science"
+    ],
+    "source": "deep-research",
+    "quality": "researched"
+  },
+  {
+    "channel_id": "UC14d4SF8PHtsz2W4HJSl2jw",
+    "title": "Nasher",
+    "description": "Entertaining hockey YouTuber with GoPro footage, challenges, product reviews, and vlogs.",
+    "interests": [
+      "hockey",
+      "sports"
+    ],
+    "age_min": 10,
+    "age_max": 16,
+    "quality": "verified",
+    "source": "research"
+  },
+  {
+    "channel_id": "UC_AFyA9FqrZ57bb9QRH77wg",
+    "title": "The Hockey Guy",
+    "description": "In-depth NHL discussion covering all 32 teams, player analysis, and hockey history.",
+    "interests": [
+      "hockey",
+      "sports"
+    ],
+    "age_min": 11,
+    "age_max": 16,
+    "quality": "verified",
+    "source": "research"
+  },
+  {
+    "channel_id": "UCDGB6MoY1PIuX5oHJSH9Cgg",
+    "title": "Coach Jeremy",
+    "description": "Hockey dad and coach mixing skills tutorials with fun challenges. Largest hockey skills channel on YouTube.",
+    "interests": [
+      "hockey",
+      "sports"
+    ],
+    "age_min": 8,
+    "age_max": 16,
+    "quality": "verified",
+    "source": "research"
+  },
+  {
+    "channel_id": "UCIIP7HpZewRTKQGaHTP6x8g",
+    "title": "Pavel Barber",
+    "description": "Stickhandling specialist with gravity-defying trick shots and deke tutorials. Incredible skill content.",
+    "interests": [
+      "hockey",
+      "sports"
+    ],
+    "age_min": 9,
+    "age_max": 16,
+    "quality": "verified",
+    "source": "research"
+  },
+  {
+    "channel_id": "UCJoMmMBGMimAuEgVPU05QPQ",
+    "title": "Hockey Tutorial",
+    "description": "UK-based creator breaking down skating technique, shooting mechanics, and what makes elite NHL players special.",
+    "interests": [
+      "hockey",
+      "sports"
+    ],
+    "age_min": 10,
+    "age_max": 16,
+    "quality": "verified",
+    "source": "research"
+  },
+  {
+    "channel_id": "UC-ZaFVre7Koir_VcaM2LpNA",
+    "title": "MihranTV",
+    "description": "Age-labelled hip hop dance tutorials for kids, broken into learnable steps by LA choreographer Mihran Kirakosian.",
+    "interests": [
+      "dance",
+      "music"
+    ],
+    "age_min": 5,
+    "age_max": 14,
+    "quality": "verified",
+    "source": "research"
+  },
+  {
+    "channel_id": "UCjoXKtJLuyb6gAG3sQlyq0Q",
+    "title": "The Ballet Coach",
+    "description": "Former English National Ballet dancer Sarah Du-Feu offers free ballet classes for different ages including 5-11 year olds.",
+    "interests": [
+      "dance"
+    ],
+    "age_min": 5,
+    "age_max": 12,
+    "quality": "verified",
+    "source": "research"
+  },
+  {
+    "channel_id": "UCHJDqsdYIHcOYr1-ksM8OwQ",
+    "title": "YouDance",
+    "description": "Structured dance lessons across ballet, hip hop, jazz and contemporary for homeschool and after-school use.",
+    "interests": [
+      "dance",
+      "music"
+    ],
+    "age_min": 5,
+    "age_max": 14,
+    "quality": "researched",
+    "source": "research"
+  },
+  {
+    "channel_id": "UC7EFWpvc1wYuUwrtZ_BLi9A",
+    "title": "Kids Learning Tube",
+    "description": "Animated educational songs covering countries, geography, science and history aimed at younger children.",
+    "interests": [
+      "geography",
+      "science",
+      "music"
+    ],
+    "age_min": 4,
+    "age_max": 10,
+    "quality": "verified",
+    "source": "research"
+  },
+  {
+    "channel_id": "UC6E2mP01ZLH_kbAyeazCNdg",
+    "title": "Brave Wilderness",
+    "description": "Wildlife educator Coyote Peterson explores animals and habitats around the world with up-close encounters.",
+    "interests": [
+      "animals",
+      "nature",
+      "geography"
+    ],
+    "age_min": 7,
+    "age_max": 14,
+    "quality": "verified",
+    "source": "research"
+  },
+  {
+    "channel_id": "UCqscMO1YfPB3-7dZZSxKPrQ",
+    "title": "KIDZ BOP Dance Along",
+    "description": "Dance-along tutorials to kid-friendly versions of current pop hits, performed by KIDZ BOP kids.",
+    "interests": [
+      "dance",
+      "music"
+    ],
+    "age_min": 5,
+    "age_max": 12,
+    "quality": "verified",
+    "source": "research"
+  },
+  {
+    "channel_id": "UChIjW4BWKLqpojTrS_tX0mg",
+    "title": "Just Dance",
+    "description": "Official Ubisoft Just Dance channel with dance-along gameplay videos to pop songs.",
+    "interests": [
+      "dance",
+      "music",
+      "gaming"
+    ],
+    "age_min": 6,
+    "age_max": 14,
+    "quality": "verified",
+    "source": "research"
+  },
+  {
+    "channel_id": "UCVU1FJjcCgCUNX5juPZWfqw",
+    "title": "Move Dance Learn",
+    "description": "Dance tutorials, creative movement and dance craft activities run by trained dancer Samantha, designed for younger children.",
+    "interests": [
+      "dance",
+      "crafts"
+    ],
+    "age_min": 4,
+    "age_max": 10,
+    "quality": "verified",
+    "source": "research"
+  },
+  {
+    "channel_id": "UC77TM6fouevvB0xJLpUnREA",
+    "title": "Saskia's Dansschool Kids",
+    "description": "Netherlands-based kids performing real hip hop and commercial choreography with step-by-step breakdowns.",
+    "interests": [
+      "dance",
+      "music"
+    ],
+    "age_min": 5,
+    "age_max": 12,
+    "quality": "verified",
+    "source": "research"
+  },
+  {
+    "channel_id": "UC3DwuaUuFPbv9gq5wypEyqQ",
+    "title": "Claudia Dean World",
+    "description": "Ex-Royal Ballet School dancer sharing ballet tutorials, pointe technique, and dance lifestyle content for aspiring dancers.",
+    "interests": [
+      "dance"
+    ],
+    "age_min": 10,
+    "age_max": 16,
+    "quality": "verified",
+    "source": "research"
+  },
+  {
+    "channel_id": "UC2V-OGycOYuUrKGmgrlVdoA",
+    "title": "LEIA",
+    "description": "Step-by-step K-pop dance tutorials organised by skill level, making K-pop choreography accessible to beginners.",
+    "interests": [
+      "dance",
+      "music"
+    ],
+    "age_min": 10,
+    "age_max": 16,
+    "quality": "verified",
+    "source": "research"
+  },
+  {
+    "channel_id": "UCmmPgObSUPw1HL2lq6H4ffA",
+    "title": "Geography Now",
+    "description": "Country-by-country geography series covering culture, politics and physical geography with maps and visuals.",
+    "interests": [
+      "geography",
+      "history"
+    ],
+    "age_min": 10,
+    "age_max": 16,
+    "quality": "verified",
+    "source": "research"
+  },
+  {
+    "channel_id": "UCUEd_B2TkfmpCg_6-H0dHZA",
+    "title": "Messy Hands - Kids Cooking",
+    "description": "Features the BBC 'I Can Cook' series where kids learn real cooking skills with host Katy in a fun, hands-on format.",
+    "interests": [
+      "cooking"
+    ],
+    "age_min": 4,
+    "age_max": 10,
+    "quality": "verified",
+    "source": "research"
+  },
+  {
+    "channel_id": "UCUnnGGb3SoU1nQ6iPYMCWNg",
+    "title": "CharlisCraftyKitchen",
+    "description": "Kid-hosted baking show where sisters Charli and Ash make fun themed treats, party food and creative desserts.",
+    "interests": [
+      "cooking",
+      "crafts"
+    ],
+    "age_min": 5,
+    "age_max": 12,
+    "quality": "verified",
+    "source": "research"
+  },
+  {
+    "channel_id": "UCjsn-0_JCJSMhYH_oU4EkSA",
+    "title": "Dino Dana",
+    "description": "Based on the TV show \u2014 10-year-old paleontologist-in-training Dana explores dinosaurs with solid science woven into adventure stories.",
+    "interests": [
+      "dinosaurs",
+      "science"
+    ],
+    "age_min": 5,
+    "age_max": 10,
+    "quality": "verified",
+    "source": "research"
+  },
+  {
+    "channel_id": "UCmVa-cbCpkd5Cd9Fr_4tCWg",
+    "title": "Your Dinosaurs Are Wrong",
+    "description": "Uses toy dinosaurs to explain what we actually know about each species \u2014 entertaining format, genuinely educational.",
+    "interests": [
+      "dinosaurs",
+      "science"
+    ],
+    "age_min": 9,
+    "age_max": 14,
+    "quality": "verified",
+    "source": "research"
+  },
+  {
+    "channel_id": "UCDSzwZqgtJEnUzacq3ddoOQ",
+    "title": "Ben G Thomas",
+    "description": "Paleontology student producing short, well-researched videos on prehistoric life that treat the audience as intelligent.",
+    "interests": [
+      "dinosaurs",
+      "science"
+    ],
+    "age_min": 10,
+    "age_max": 16,
+    "quality": "verified",
+    "source": "research"
+  },
+  {
+    "channel_id": "UCJykHJfN9FHtf79IgYE00zg",
+    "title": "T-Rex Ranch",
+    "description": "Live-action dinosaur adventures with CGI dinos \u2014 entertaining and accessible for younger dinosaur fans.",
+    "interests": [
+      "dinosaurs"
+    ],
+    "age_min": 4,
+    "age_max": 8,
+    "quality": "verified",
+    "source": "research"
+  },
+  {
+    "channel_id": "UCgCV4LtUjiBL8-6cqqMeuFQ",
+    "title": "Mighty Machines",
+    "description": "Classic Canadian TV series with real documentary footage of machines \u2014 bulldozers, cranes, trains \u2014 narrated as if the machines are speaking about their jobs.",
+    "interests": [
+      "vehicles",
+      "engineering"
+    ],
+    "age_min": 3,
+    "age_max": 10,
+    "quality": "verified",
+    "source": "research"
+  },
+  {
+    "channel_id": "UC8KyyhPfL4v2sZGbcGg7b7Q",
+    "title": "Handyman Hal",
+    "description": "Host visits real construction sites, fire stations, and farms to show kids how vehicles and equipment work up close.",
+    "interests": [
+      "vehicles",
+      "engineering"
+    ],
+    "age_min": 2,
+    "age_max": 7,
+    "quality": "verified",
+    "source": "research"
+  },
+  {
+    "channel_id": "UCslJxr8-nmxGaobFGGTFDbA",
+    "title": "Twenty Trucks",
+    "description": "Original music videos about real trucks and construction machines \u2014 catchy tunes set to real vehicle footage.",
+    "interests": [
+      "vehicles",
+      "music"
+    ],
+    "age_min": 2,
+    "age_max": 8,
+    "quality": "verified",
+    "source": "research"
+  },
+  {
+    "channel_id": "UC4QtAgICkjXAR_xWQrHiAbw",
+    "title": "John Deere Kids",
+    "description": "Official John Deere channel showing real tractors, combines and construction equipment at work on farms and building sites.",
+    "interests": [
+      "vehicles",
+      "engineering"
+    ],
+    "age_min": 2,
+    "age_max": 6,
+    "quality": "verified",
+    "source": "research"
+  },
+  {
+    "channel_id": "UC-vObULK1w635bdFQpNlbQA",
+    "title": "Hoopla Recipes",
+    "description": "Beginner-friendly cake decorating and baking tutorials with clear step-by-step instructions.",
+    "interests": [
+      "cooking",
+      "crafts"
+    ],
+    "age_min": 5,
+    "age_max": 12,
+    "quality": "verified",
+    "source": "research"
+  },
+  {
+    "channel_id": "UC7ABaoK3AFxuy_i4f6xV1tA",
+    "title": "Chuffsters",
+    "description": "Football gaming challenges and creative EA FC formats like building teams from specific criteria.",
+    "interests": [
+      "gaming",
+      "sports"
+    ],
+    "age_min": 8,
+    "age_max": 14,
+    "quality": "verified",
+    "source": "parent-signal"
+  },
+  {
+    "channel_id": "UCyY4jVInowKG9Nm20xXGHFw",
+    "title": "The Wingrove Family",
+    "description": "Billy Wingrove (F2Freestylers) and his kids doing football skills, challenges and family football fun.",
+    "interests": [
+      "sports"
+    ],
+    "age_min": 6,
+    "age_max": 14,
+    "quality": "verified",
+    "source": "parent-signal"
+  },
+  {
+    "channel_id": "UCPSaPk7kfcEJ7QZG61XahEA",
+    "title": "Cook with Amber",
+    "description": "Teen chef and Food Network Star Kids winner Amber Kelley cooks real meals and shows how fun fresh food can be.",
+    "interests": [
+      "cooking"
+    ],
+    "age_min": 8,
+    "age_max": 14,
+    "quality": "verified",
+    "source": "research"
+  }
+]

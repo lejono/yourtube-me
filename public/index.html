@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>YourTube</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <!-- Login Screen (shown by default until auth check completes) -->
+  <div id="login-screen" class="screen">
+    <div class="login-box">
+      <h1>Your<span>Tube</span></h1>
+      <p>Enter your name and password to watch</p>
+      <form id="login-form">
+        <input
+          type="text"
+          id="username-input"
+          placeholder="Name"
+          autocomplete="username"
+          inputmode="text"
+        >
+        <input
+          type="password"
+          id="password-input"
+          placeholder="Password"
+          autocomplete="current-password"
+          inputmode="text"
+        >
+        <button type="submit" class="btn-primary">Watch!</button>
+      </form>
+      <p id="login-error" class="error hidden"></p>
+    </div>
+  </div>
+
+  <!-- Feed Screen -->
+  <div id="feed-screen" class="screen hidden">
+    <header>
+      <div class="header-inner">
+        <h1>Your<span>Tube</span></h1>
+        <div class="header-actions">
+          <a id="kidcode-link" href="#" class="btn-kidcode hidden">KidCode</a>
+          <button id="logout-btn" class="btn-logout">Sign out</button>
+        </div>
+      </div>
+      <div id="search-bar" class="search-bar">
+        <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+        <input type="search" id="search-input" placeholder="Search videos..." inputmode="search" autocomplete="off" maxlength="100">
+        <button id="search-clear" class="search-clear hidden" aria-label="Clear search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18"/><path d="M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <div id="channel-tabs" class="channel-tabs">
+        <button class="tab active" data-channel="all">All</button>
+      </div>
+    </header>
+
+    <main>
+      <div id="loading" class="loading hidden">Loading videos...</div>
+      <div id="error" class="error-state hidden">Something went wrong. Tap to retry.</div>
+      <div id="empty" class="empty hidden">No videos yet. Ask a parent to add some channels!</div>
+      <div id="video-grid" class="video-grid"></div>
+    </main>
+  </div>
+
+  <!-- Player Screen -->
+  <div id="player-screen" class="screen hidden">
+    <div class="player-header">
+      <button id="back-btn" class="btn-back" aria-label="Back to feed">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+        Back
+      </button>
+    </div>
+
+    <div class="player-container">
+      <div id="player-embed"></div>
+      <div id="player-overlay" class="player-overlay hidden">
+        <div class="overlay-content">
+          <h2>Up Next</h2>
+          <p class="overlay-placeholder">Loading next picks...</p>
+          <div class="overlay-actions">
+            <button id="replay-btn" class="btn-overlay">Replay</button>
+            <button id="back-to-feed-btn" class="btn-overlay btn-overlay-secondary">Back to Feed</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="player-info">
+      <div class="player-info-text">
+        <h2 id="player-title"></h2>
+        <p id="player-channel"></p>
+      </div>
+      <button id="player-like-btn" class="btn-like-player" aria-label="Like this video">
+        <svg class="heart-outline" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        <svg class="heart-filled hidden" width="28" height="28" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <script src="/js/app.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+node_modules
+test
+*.test.js
+.env
+data
+*.sqlite
+*.sqlite-*
+*.db
+*.db-*

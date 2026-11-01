@@ -1,0 +1,11 @@
+{
+  "name": "yourtube",
+  "version": "0.1.0",
+  "description": "Local-first YouTube wrapper for parent-child use",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test --test-concurrency=1 test/*.test.js"
+  }
+}

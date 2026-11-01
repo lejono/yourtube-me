@@ -1,0 +1,9 @@
+{
+  "name": "yourtube-worker",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "start": "node worker.js",
+    "test": "node --test --test-concurrency=1 test/*.test.js"
+  }
+}
