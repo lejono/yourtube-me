@@ -51,6 +51,10 @@ node --test test/*.test.js
 
 Found a security problem? Please email yourtube@postquantum.space rather than opening a public issue.
 
+## Related projects
+
+- [Bouncer](https://imbue.com/product/bouncer/) by Imbue: a browser extension that filters your own X/Twitter feed by topics you describe. Same "take back the feed" idea for adults; YourTube does it for parents curating what their children watch.
+
 ## License
 
 AGPL-3.0. See [LICENSE](LICENSE).
