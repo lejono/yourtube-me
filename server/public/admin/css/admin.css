@@ -967,3 +967,36 @@ textarea {
   color: #666;
   line-height: 1.5;
 }
+
+/* --- Welcome / support banner (shown once after signup) --- */
+
+.welcome-support {
+  background: #fff7f0;
+  border: 1px solid #ffd9bf;
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.welcome-support p {
+  margin: 0 0 0.75rem;
+  line-height: 1.5;
+}
+
+.welcome-support-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.welcome-support-actions a.btn {
+  text-decoration: none;
+}
+
+.welcome-support-actions .btn {
+  width: auto;
+  flex: 0 0 auto;
+  margin: 0;
+  padding: 0.5rem 1rem;
+  font-size: 0.95rem;
+}

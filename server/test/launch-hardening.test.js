@@ -156,6 +156,32 @@ test('signup cap: public status endpoint reports whether signups are open', asyn
   assert.equal(r2.body.open, true);
 });
 
+// --- Donations ---
+
+test('public config: donate_url is null unless set to an https URL', async () => {
+  delete process.env.YOURTUBE_DONATE_URL;
+  let r = await req('GET', '/api/public-config');
+  assert.equal(r.status, 200);
+  assert.equal(r.body.donate_url, null);
+
+  process.env.YOURTUBE_DONATE_URL = 'https://ko-fi.com/yourtube';
+  r = await req('GET', '/api/public-config');
+  assert.equal(r.body.donate_url, 'https://ko-fi.com/yourtube');
+
+  process.env.YOURTUBE_DONATE_URL = 'javascript:alert(1)';
+  r = await req('GET', '/api/public-config');
+  assert.equal(r.body.donate_url, null);
+  delete process.env.YOURTUBE_DONATE_URL;
+});
+
+test('landing page and dashboard contain the (hidden) support links', async () => {
+  const landing = await req('GET', '/');
+  assert.match(landing.body, /id="support-line"/);
+  assert.match(landing.body, /id="footer-support"/);
+  const admin = await req('GET', '/admin');
+  assert.match(admin.body, /id="welcome-support"/);
+});
+
 // --- HTTP hardening ---
 
 test('request bodies over 64KB are refused', async () => {

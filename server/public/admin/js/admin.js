@@ -183,9 +183,25 @@ async function handleSignup(e) {
       return;
     }
     await loadDashboard();
+    showWelcomeSupport();
   } catch {
     showError('signup-error', 'Network error. Please try again.');
   }
+}
+
+// Shown once, right after a new account is created, if a donate link is configured.
+async function showWelcomeSupport() {
+  try {
+    const res = await fetch('/api/public-config');
+    if (!res.ok) return;
+    const { donate_url } = await res.json();
+    if (!donate_url) return;
+    $('welcome-support-link').href = donate_url;
+    $('welcome-support').classList.remove('hidden');
+    $('welcome-support-dismiss').addEventListener('click', () => {
+      $('welcome-support').classList.add('hidden');
+    }, { once: true });
+  } catch { /* optional */ }
 }
 
 async function handleLogin(e) {

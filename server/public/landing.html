@@ -31,6 +31,10 @@
                         that are both fun and enriching.
                     </p>
                     <a href="/admin" class="cta-btn">Set up your family</a>
+                    <p id="support-line" class="support-line hidden">
+                        YourTube is free, with no ads.
+                        <a class="support-link" target="_blank" rel="noopener">Support YourTube ♥</a>
+                    </p>
 
                     <div class="kid-code-entry">
                         <p class="kid-code-label">Already have a code? Enter it here:</p>
@@ -112,7 +116,22 @@
         <footer class="site-footer">
             <div class="container">
                 <p>YourTube is undergoing beta testing. Please send feedback to yourtube@postquantum.space</p>
+                <p id="footer-support" class="hidden">
+                    Like it? <a class="support-link" target="_blank" rel="noopener">Help cover running costs</a>
+                    · <a href="https://github.com/lejono/yourtube-me" target="_blank" rel="noopener">Source code</a>
+                </p>
             </div>
         </footer>
+        <script>
+            fetch('/api/public-config')
+                .then(r => r.ok ? r.json() : {})
+                .then(cfg => {
+                    if (!cfg.donate_url) return;
+                    document.querySelectorAll('.support-link').forEach(a => { a.href = cfg.donate_url; });
+                    document.getElementById('support-line').classList.remove('hidden');
+                    document.getElementById('footer-support').classList.remove('hidden');
+                })
+                .catch(() => {});
+        </script>
     </body>
 </html>

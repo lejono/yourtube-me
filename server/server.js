@@ -235,6 +235,11 @@ async function handleRequest(req, res) {
 
     // --- API: auth ---
 
+    if (method === 'GET' && pathname === '/api/public-config') {
+      const donate = process.env.YOURTUBE_DONATE_URL || '';
+      return json(res, 200, { donate_url: /^https:\/\/[^\s"'<>]+$/.test(donate) ? donate : null });
+    }
+
     if (method === 'GET' && pathname === '/api/auth/signup-status') {
       return json(res, 200, { open: getSignupStatus(db).open });
     }
