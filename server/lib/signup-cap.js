@@ -27,6 +27,7 @@ export function getSignupStatus(db, env = process.env) {
 export function addToWaitlist(db, email) {
   const clean = String(email).trim().toLowerCase().slice(0, 254);
   if (!clean.includes('@')) return false;
+  if (/[\x00-\x1f\x7f-\x9f]/.test(clean)) return false; // no control characters
   db.prepare('INSERT OR IGNORE INTO waitlist (email) VALUES (?)').run(clean);
   return true;
 }

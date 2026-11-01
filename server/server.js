@@ -247,7 +247,7 @@ async function handleRequest(req, res) {
         return json(res, err.status || 400, { error: 'Invalid request' });
       }
       const email = typeof body.email === 'string' ? body.email.trim() : '';
-      if (email.length > 254 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      if (email.length > 254 || !/^[^\s@\x00-\x1f\x7f-\x9f]+@[^\s@\x00-\x1f\x7f-\x9f]+\.[^\s@\x00-\x1f\x7f-\x9f]+$/.test(email)) {
         return json(res, 400, { error: 'Please enter a valid email address.' });
       }
       addToWaitlist(db, email);

@@ -14,4 +14,6 @@ const status = getSignupStatus(db);
 
 console.log(`Signups: ${status.limited ? `${status.used}/${status.slots} new places used` : 'unlimited'}, ${status.open ? 'open' : 'FULL'}`);
 console.log(`Waitlist: ${rows.length}`);
-for (const r of rows) console.log(`  ${r.created_at}  ${r.email}`);
+// Escape anything non-printable so stored text can't drive the terminal.
+const safe = s => String(s).replace(/[\x00-\x1f\x7f-\x9f]/g, c => `\\x${c.charCodeAt(0).toString(16).padStart(2, '0')}`);
+for (const r of rows) console.log(`  ${safe(r.created_at)}  ${safe(r.email)}`);

@@ -192,6 +192,7 @@ test('POST /api/waitlist stores a lowercased email and rejects junk', async () =
   assert.equal(again.status, 200);
 
   assert.equal((await req('POST', '/api/waitlist', { body: { email: 'not-an-email' } })).status, 400);
+  assert.equal((await req('POST', '/api/waitlist', { body: { email: 'evil\u001b[2J@example.com' } })).status, 400);
   assert.equal((await req('POST', '/api/waitlist', { body: {} })).status, 400);
 
   const db = new Database(dbPath);
