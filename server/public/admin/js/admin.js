@@ -204,7 +204,7 @@ async function showWelcomeSupport() {
     if (!res.ok) return;
     const { donate_url } = await res.json();
     if (!donate_url) return;
-    $('welcome-support-link').href = donate_url;
+    $('welcome-support-link').href = '/go/donate';
     $('welcome-support').classList.remove('hidden');
     $('welcome-support-dismiss').addEventListener('click', () => {
       $('welcome-support').classList.add('hidden');
@@ -269,7 +269,7 @@ async function refreshSignupStatus() {
     ]);
     signupsOpen = status.open !== false;
     if (config.donate_url) {
-      $('waitlist-support-link').href = config.donate_url;
+      $('waitlist-support-link').href = '/go/donate';
       $('waitlist-support').classList.remove('hidden');
     }
   } catch { /* keep defaults */ }

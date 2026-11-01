@@ -83,7 +83,7 @@ test('runMigrations creates all expected tables', () => {
       .map(r => r.name)
       .sort();
 
-    assert.deepEqual(tables, ['channels', 'curated_channels', 'curated_videos', 'families', 'feedback', 'kids', 'likes', 'parent_ratings', 'sessions', 'videos', 'waitlist', 'watches']);
+    assert.deepEqual(tables, ['channels', 'curated_channels', 'curated_videos', 'daily_stats', 'families', 'feedback', 'kids', 'likes', 'parent_ratings', 'sessions', 'videos', 'waitlist', 'watches']);
   } finally {
     closeDb();
     rmSync(dir, { recursive: true });

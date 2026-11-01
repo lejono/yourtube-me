@@ -55,6 +55,7 @@ import { fetchAndInsertVideos } from './lib/rss-fetch.js';
 import { resolveChannel } from './lib/resolve-channel.js';
 import { getSignupStatus, addToWaitlist } from './lib/signup-cap.js';
 import { hit, isLimited, clientIp, LIMITS } from './lib/rate-limit.js';
+import { recordView, recordEvent, statsKeyOk, getStats, isBot } from './lib/stats.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const PUBLIC_DIR = join(__dirname, 'public');
@@ -186,10 +187,12 @@ async function handleRequest(req, res) {
       if (kid) {
         return serveFile(res, join(PUBLIC_DIR, 'index.html'));
       }
+      recordView(db, req, 'landing');
       return serveFile(res, join(PUBLIC_DIR, 'landing.html'));
     }
 
     if (method === 'GET' && (pathname === '/admin' || pathname === '/admin/')) {
+      recordView(db, req, 'admin');
       return serveFile(res, join(PUBLIC_DIR, 'admin', 'index.html'));
     }
 
@@ -235,6 +238,23 @@ async function handleRequest(req, res) {
 
     // --- API: auth ---
 
+    // Donate link goes through here so clicks can be counted.
+    if (method === 'GET' && pathname === '/go/donate') {
+      const donate = process.env.YOURTUBE_DONATE_URL || '';
+      if (!/^https:\/\/[^\s"'<>]+$/.test(donate)) { res.writeHead(404); res.end('Not found'); return; }
+      if (!isBot(req)) recordEvent(db, 'click:donate');
+      res.writeHead(302, { Location: donate });
+      res.end();
+      return;
+    }
+
+    // Operator stats (aggregate counts + recent signups). Hidden without the key.
+    if (method === 'GET' && pathname === '/api/stats') {
+      if (!statsKeyOk(req)) return json(res, 404, { error: 'Not found' });
+      const days = Math.min(90, Math.max(1, Number.parseInt(url.searchParams.get('days') || '14', 10) || 14));
+      return json(res, 200, getStats(db, { days }));
+    }
+
     if (method === 'GET' && pathname === '/api/public-config') {
       const donate = process.env.YOURTUBE_DONATE_URL || '';
       return json(res, 200, { donate_url: /^https:\/\/[^\s"'<>]+$/.test(donate) ? donate : null });
@@ -251,6 +271,7 @@ async function handleRequest(req, res) {
         return json(res, 400, { error: 'Please enter a valid email address.' });
       }
       addToWaitlist(db, email);
+      recordEvent(db, 'waitlist');
       return json(res, 200, { ok: true });
     }
 
@@ -273,6 +294,7 @@ async function handleRequest(req, res) {
       }
       if (!getSignupStatus(db).open) {
         addToWaitlist(db, email);
+        recordEvent(db, 'waitlist');
         return json(res, 403, {
           error: "YourTube is full for now. We've saved your email and will let you know when there's room.",
           waitlisted: true,
@@ -282,6 +304,7 @@ async function handleRequest(req, res) {
         const family = createFamily(db, email, password);
         const sessionId = createSession(db, family.id);
         setSessionCookie(res, sessionId);
+        recordEvent(db, 'signup');
         return json(res, 201, { family_id: family.id });
       } catch (err) {
         if (err.message?.includes('UNIQUE constraint failed')) {

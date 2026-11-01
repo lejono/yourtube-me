@@ -136,7 +136,7 @@
                 .then(r => r.ok ? r.json() : {})
                 .then(cfg => {
                     if (!cfg.donate_url) return;
-                    document.querySelectorAll('.support-link').forEach(a => { a.href = cfg.donate_url; });
+                    document.querySelectorAll('.support-link').forEach(a => { a.href = '/go/donate'; });
                     document.getElementById('support-line').classList.remove('hidden');
                     document.getElementById('footer-support').classList.remove('hidden');
                 })
