@@ -1,0 +1,39 @@
+- generic [active] [ref=e1]:
+  - link "Ko-fi Logo" [ref=e4] [cursor=pointer]:
+    - /url: /
+    - img "Ko-fi Logo" [ref=e5]
+  - generic [ref=e8]:
+    - heading "Sign up - it's free!" [level=2] [ref=e10]
+    - form [ref=e12]:
+      - textbox "Display name" [ref=e14]
+      - textbox "Email address" [ref=e16]
+      - textbox "Choose a password" [ref=e18]
+      - generic [ref=e20]:
+        - paragraph [ref=e21]: Ko-fi is a safe, friendly place. You must be 18 or over to use Ko-fi. Pages that break our terms will be unpublished.
+        - generic [ref=e22]:
+          - checkbox "I accept the terms and have read the privacy policy" [ref=e23] [cursor=pointer]
+          - generic [ref=e24] [cursor=pointer]:
+            - text: I accept the
+            - link "terms" [ref=e25]:
+              - /url: /home/tandcs
+            - text: and have read the
+            - link "privacy policy" [ref=e26]:
+              - /url: /home/privacy
+        - paragraph
+      - button "Create my account" [ref=e28] [cursor=pointer]
+    - generic [ref=e29]: or sign up with
+    - generic [ref=e32]:
+      - button " Google" [ref=e34] [cursor=pointer]:
+        - generic [ref=e35]: 
+        - text: Google
+      - button " Facebook" [ref=e37] [cursor=pointer]:
+        - generic [ref=e38]: 
+        - text: Facebook
+      - button " Twitter" [ref=e40] [cursor=pointer]:
+        - generic [ref=e41]: 
+        - text: Twitter
+      - button " Twitch" [ref=e43] [cursor=pointer]:
+        - generic [ref=e44]: 
+        - text: Twitch
+    - link "Already have an account? Log in here" [ref=e47] [cursor=pointer]:
+      - /url: /Account/Login

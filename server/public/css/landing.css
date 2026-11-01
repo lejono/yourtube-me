@@ -367,3 +367,10 @@ body {
 .site-footer a {
   color: #666;
 }
+
+.support-line {
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5;
+}
