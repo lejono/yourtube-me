@@ -240,6 +240,20 @@ async function handleRequest(req, res) {
       return json(res, 200, { donate_url: /^https:\/\/[^\s"'<>]+$/.test(donate) ? donate : null });
     }
 
+    if (method === 'POST' && pathname === '/api/waitlist') {
+      if (!hit(`waitlist:${ip}`, LIMITS.signup.max, LIMITS.signup.windowMs)) return tooMany();
+      let body;
+      try { body = await readBody(req); } catch (err) {
+        return json(res, err.status || 400, { error: 'Invalid request' });
+      }
+      const email = typeof body.email === 'string' ? body.email.trim() : '';
+      if (email.length > 254 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        return json(res, 400, { error: 'Please enter a valid email address.' });
+      }
+      addToWaitlist(db, email);
+      return json(res, 200, { ok: true });
+    }
+
     if (method === 'GET' && pathname === '/api/auth/signup-status') {
       return json(res, 200, { open: getSignupStatus(db).open });
     }

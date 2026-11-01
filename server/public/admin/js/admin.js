@@ -179,6 +179,14 @@ async function handleSignup(e) {
     }
     if (!res.ok) {
       const data = await res.json().catch(() => ({}));
+      if (data.waitlisted) {
+        // Places filled up while they were on the page; they're on the list now.
+        signupsOpen = false;
+        await refreshSignupStatus();
+        showForm('waitlist');
+        showWaitlistThanks();
+        return;
+      }
       showError('signup-error', data.error || 'Signup failed. Please try again.');
       return;
     }
@@ -242,15 +250,56 @@ async function handleLogout() {
 
 // ---- Auth form toggle ----
 
+let signupsOpen = true;
+
 function showForm(which) {
-  const signupForm = $('signup-form');
-  const loginForm = $('login-form');
-  if (which === 'signup') {
-    signupForm.classList.remove('hidden');
-    loginForm.classList.add('hidden');
-  } else {
-    loginForm.classList.remove('hidden');
-    signupForm.classList.add('hidden');
+  // 'signup' falls back to the waitlist when new places are full.
+  if (which === 'signup' && !signupsOpen) which = 'waitlist';
+  $('signup-form').classList.toggle('hidden', which !== 'signup');
+  $('login-form').classList.toggle('hidden', which !== 'login');
+  $('waitlist-panel').classList.toggle('hidden', which !== 'waitlist');
+}
+
+// Ask the server whether signups are open, and fill in the donate link.
+async function refreshSignupStatus() {
+  try {
+    const [status, config] = await Promise.all([
+      fetch('/api/auth/signup-status').then(r => r.json()),
+      fetch('/api/public-config').then(r => r.json()),
+    ]);
+    signupsOpen = status.open !== false;
+    if (config.donate_url) {
+      $('waitlist-support-link').href = config.donate_url;
+      $('waitlist-support').classList.remove('hidden');
+    }
+  } catch { /* keep defaults */ }
+  if (!$('signup-form').classList.contains('hidden') && !signupsOpen) showForm('waitlist');
+}
+
+function showWaitlistThanks() {
+  $('waitlist-form').classList.add('hidden');
+  $('waitlist-thanks').classList.remove('hidden');
+}
+
+async function handleWaitlist(e) {
+  e.preventDefault();
+  clearError('waitlist-error');
+  const email = $('waitlist-email').value.trim();
+  if (!email) return;
+  try {
+    const res = await fetch('/api/waitlist', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email }),
+    });
+    if (!res.ok) {
+      const data = await res.json().catch(() => ({}));
+      showError('waitlist-error', data.error || 'Something went wrong. Please try again.');
+      return;
+    }
+    showWaitlistThanks();
+  } catch {
+    showError('waitlist-error', 'Network error. Please try again.');
   }
 }
 
@@ -1144,6 +1193,8 @@ document.addEventListener('DOMContentLoaded', () => {
   $('login-form').addEventListener('submit', handleLogin);
   $('show-login-btn').addEventListener('click', () => showForm('login'));
   $('show-signup-btn').addEventListener('click', () => showForm('signup'));
+  $('waitlist-form').addEventListener('submit', handleWaitlist);
+  $('waitlist-login-btn').addEventListener('click', () => showForm('login'));
   $('logout-btn').addEventListener('click', handleLogout);
 
   $('add-kid-btn').addEventListener('click', showAddKidForm);
@@ -1162,5 +1213,6 @@ document.addEventListener('DOMContentLoaded', () => {
   $('regen-token-btn').addEventListener('click', regenerateSetupToken);
   $('revoke-devices-btn').addEventListener('click', revokeAllDevices);
 
+  refreshSignupStatus();
   checkSession();
 });

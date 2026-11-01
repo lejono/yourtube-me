@@ -182,6 +182,30 @@ test('landing page and dashboard contain the (hidden) support links', async () =
   assert.match(admin.body, /id="welcome-support"/);
 });
 
+// --- Waitlist ---
+
+test('POST /api/waitlist stores a lowercased email and rejects junk', async () => {
+  const ok = await req('POST', '/api/waitlist', { body: { email: '  Wait.Er@Example.com ' } });
+  assert.equal(ok.status, 200);
+  assert.equal(ok.body.ok, true);
+  const again = await req('POST', '/api/waitlist', { body: { email: 'wait.er@example.com' } });
+  assert.equal(again.status, 200);
+
+  assert.equal((await req('POST', '/api/waitlist', { body: { email: 'not-an-email' } })).status, 400);
+  assert.equal((await req('POST', '/api/waitlist', { body: {} })).status, 400);
+
+  const db = new Database(dbPath);
+  const rows = db.prepare("SELECT email FROM waitlist WHERE email LIKE 'wait.er%'").all();
+  db.close();
+  assert.deepEqual(rows.map(r => r.email), ['wait.er@example.com']);
+});
+
+test('admin page has a waitlist panel with a support link', async () => {
+  const admin = await req('GET', '/admin');
+  assert.match(admin.body, /id="waitlist-panel"/);
+  assert.match(admin.body, /id="waitlist-support"/);
+});
+
 // --- HTTP hardening ---
 
 test('request bodies over 64KB are refused', async () => {

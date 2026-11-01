@@ -124,6 +124,12 @@
             </div>
         </footer>
         <script>
+            fetch('/api/auth/signup-status')
+                .then(r => r.ok ? r.json() : {})
+                .then(s => {
+                    if (s.open === false) document.querySelector('.cta-btn').textContent = 'Join the waitlist';
+                })
+                .catch(() => {});
             fetch('/api/public-config')
                 .then(r => r.ok ? r.json() : {})
                 .then(cfg => {

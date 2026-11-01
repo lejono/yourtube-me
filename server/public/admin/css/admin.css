@@ -1000,3 +1000,21 @@ textarea {
   padding: 0.5rem 1rem;
   font-size: 0.95rem;
 }
+
+/* --- Waitlist panel --- */
+
+.waitlist-text,
+.waitlist-thanks,
+.waitlist-support {
+  line-height: 1.5;
+  margin: 0.75rem 0;
+}
+
+.waitlist-thanks {
+  font-weight: 600;
+}
+
+.waitlist-support a {
+  color: #d63333;
+  font-weight: 600;
+}

@@ -37,6 +37,30 @@
         </p>
       </div>
 
+      <!-- Waitlist (shown instead of signup when new places are full) -->
+      <div id="waitlist-panel" class="hidden">
+        <h2>YourTube is full for now</h2>
+        <p class="waitlist-text">YourTube is a project for a few kids and parents. Leave your email and we'll let you know when there's room.</p>
+        <div id="waitlist-error" class="error-msg hidden"></div>
+        <form id="waitlist-form">
+          <div class="form-group">
+            <label for="waitlist-email">Email</label>
+            <input type="email" id="waitlist-email" autocomplete="email" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Join the waitlist</button>
+        </form>
+        <p id="waitlist-thanks" class="waitlist-thanks hidden">Thanks! You're on the list. We'll email you when there's room.</p>
+        <p id="waitlist-support" class="waitlist-support hidden">
+          If you want it more widely available, please
+          <a id="waitlist-support-link" target="_blank" rel="noopener">donate ♥</a>
+          or ask your VC to fund the server.
+        </p>
+        <p class="auth-toggle">
+          Already have an account?
+          <button type="button" id="waitlist-login-btn">Log in</button>
+        </p>
+      </div>
+
       <!-- Login form -->
       <div id="login-form" class="hidden">
         <h2>Log in</h2>
