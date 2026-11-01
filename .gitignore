@@ -39,3 +39,4 @@ HANDOVER.md
 # Internal handover notes (name real families)
 docs/handover-*.md
 node_modules
+.playwright-cli/
