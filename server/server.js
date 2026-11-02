@@ -56,6 +56,7 @@ import { resolveChannel } from './lib/resolve-channel.js';
 import { getSignupStatus, addToWaitlist } from './lib/signup-cap.js';
 import { hit, isLimited, clientIp, LIMITS } from './lib/rate-limit.js';
 import { recordView, recordEvent, statsKeyOk, getStats, isBot } from './lib/stats.js';
+import { getOpsData, markKidDeviceSetup, markKidSeen, markWorkerSeen } from './lib/ops.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const PUBLIC_DIR = join(__dirname, 'public');
@@ -153,7 +154,9 @@ function requireParentAuth(req, db) {
 function requireWorkerAuth(req) {
   const masterKey = process.env.YOURTUBE_WORKER_MASTER_KEY ?? '';
   const key = req.headers['x-worker-key'] ?? '';
-  return authenticateWorker(masterKey, key);
+  const ok = authenticateWorker(masterKey, key);
+  if (ok) markWorkerSeen();
+  return ok;
 }
 
 // --- Request handler ---
@@ -209,6 +212,8 @@ async function handleRequest(req, res) {
         return;
       }
       setKidCookie(res, kid.id, kid.cookie_generation);
+      markKidDeviceSetup(db, kid.id);
+      recordEvent(db, 'kid_setup');
       res.writeHead(302, { Location: '/' });
       res.end();
       return;
@@ -227,6 +232,8 @@ async function handleRequest(req, res) {
       const kid = getKidBySetupToken(db, code);
       if (!kid) return json(res, 404, { error: 'invalid code' });
       setKidCookie(res, kid.id, kid.cookie_generation);
+      markKidDeviceSetup(db, kid.id);
+      recordEvent(db, 'kid_setup');
       return json(res, 200, { ok: true });
     }
 
@@ -246,6 +253,20 @@ async function handleRequest(req, res) {
       res.writeHead(302, { Location: donate });
       res.end();
       return;
+    }
+
+    // Operator dashboard page (static; data comes from /api/ops with the key)
+    if (method === 'GET' && (pathname === '/ops' || pathname === '/ops/')) {
+      res.setHeader('X-Robots-Tag', 'noindex, nofollow');
+      res.setHeader('Cache-Control', 'no-store');
+      return serveFile(res, join(PUBLIC_DIR, 'ops.html'));
+    }
+
+    if (method === 'GET' && pathname === '/api/ops') {
+      if (!statsKeyOk(req)) return json(res, 404, { error: 'Not found' });
+      res.setHeader('Cache-Control', 'no-store');
+      const days = Math.min(90, Math.max(1, Number.parseInt(url.searchParams.get('days') || '14', 10) || 14));
+      return json(res, 200, getOpsData(db, { days }));
     }
 
     // Operator stats (aggregate counts + recent signups). Hidden without the key.
@@ -366,6 +387,7 @@ async function handleRequest(req, res) {
       if (!kid) {
         return json(res, 404, { error: 'No valid kid session' });
       }
+      markKidSeen(db, kid.id);
       const channel = url.searchParams.get('channel') ?? undefined;
       const limit = url.searchParams.get('limit') ?? undefined;
       const feed = getKidFeed(db, kid.id, { channel, limit });
@@ -433,6 +455,7 @@ async function handleRequest(req, res) {
       const { name, age, guidelines, interests } = body;
       if (!name) return json(res, 400, { error: 'name required' });
       const kid = createKid(db, session.family_id, { name, age, guidelines, interests });
+      recordEvent(db, 'kid_created');
 
       // Auto-suggest from curated DB when interests are provided
       if (Array.isArray(interests) && interests.length > 0 && age) {

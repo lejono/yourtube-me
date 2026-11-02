@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>YourTube Ops</title>
+<style>
+  :root {
+    --bg: #f6f6f4; --surface: #ffffff; --ink: #1d1d1b; --ink-2: #55554f; --muted: #8a8a83;
+    --line: #e4e4df; --bar: #3d6fd6; --bar-soft: #dbe5fa;
+    --warn-bg: #fff5e6; --warn-ink: #8a4b00; --good: #1f7a3a;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #141413; --surface: #1d1d1b; --ink: #f0f0ec; --ink-2: #b9b9b2; --muted: #8a8a83;
+      --line: #33332f; --bar: #7ea2f0; --bar-soft: #2a3550;
+      --warn-bg: #3a2a12; --warn-ink: #f3c27a; --good: #6fcf8a;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.45 system-ui, -apple-system, sans-serif; }
+  main { max-width: 1100px; margin: 0 auto; padding: 24px 16px 64px; }
+  h1 { font-size: 22px; margin: 0 0 4px; }
+  h2 { font-size: 16px; margin: 28px 0 10px; }
+  .sub { color: var(--ink-2); margin: 0 0 16px; font-size: 13px; }
+  .card { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; }
+  .tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; }
+  .tile .n { font-size: 26px; font-weight: 650; font-variant-numeric: tabular-nums; }
+  .tile .l { color: var(--ink-2); font-size: 13px; }
+  .row { display: grid; grid-template-columns: 210px 1fr 70px; align-items: center; gap: 10px; padding: 5px 0; }
+  .row .lab { color: var(--ink-2); font-size: 13px; }
+  .row .val { text-align: right; font-variant-numeric: tabular-nums; font-size: 13px; }
+  .track { height: 14px; background: var(--bar-soft); border-radius: 0 4px 4px 0; }
+  .fill { height: 14px; background: var(--bar); border-radius: 0 4px 4px 0; min-width: 2px; }
+  .days { display: flex; align-items: flex-end; gap: 2px; height: 120px; padding-top: 8px; border-bottom: 1px solid var(--line); }
+  .days .col { flex: 1; max-width: 48px; display: flex; flex-direction: column; justify-content: flex-end; height: 100%; }
+  .days .b { background: var(--bar); border-radius: 4px 4px 0 0; min-height: 1px; }
+  .days .col:hover .b { filter: brightness(1.15); }
+  .axis { display: flex; justify-content: space-between; color: var(--muted); font-size: 11px; margin-top: 4px; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--line); vertical-align: top; white-space: nowrap; }
+  th { color: var(--ink-2); font-weight: 600; white-space: nowrap; }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+  .scroll { overflow-x: auto; }
+  .tag { display: inline-block; padding: 0 6px; border-radius: 4px; font-size: 12px; border: 1px solid var(--line); color: var(--ink-2); }
+  .tag.new { border-color: var(--bar); color: var(--bar); }
+  .warn { background: var(--warn-bg); color: var(--warn-ink); border-radius: 8px; padding: 8px 12px; margin: 6px 0; font-size: 13px; }
+  .ok { color: var(--good); font-size: 13px; }
+  .muted { color: var(--muted); }
+  .toolbar { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; margin: 12px 0; }
+  button, input { font: inherit; padding: 6px 10px; border-radius: 6px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); }
+  button.on { border-color: var(--bar); color: var(--bar); font-weight: 600; }
+  #login { max-width: 420px; margin: 80px auto; }
+  .hidden { display: none !important; }
+</style>
+</head>
+<body>
+<main>
+  <div id="login" class="card">
+    <h1>YourTube Ops</h1>
+    <p class="sub">Enter the stats key to view the dashboard. It stays in this browser only.</p>
+    <form id="login-form" class="toolbar">
+      <input id="ops-key" type="password" placeholder="Stats key" autocomplete="off" style="flex:1">
+      <button type="submit">Open</button>
+    </form>
+    <p id="login-error" class="warn hidden"></p>
+  </div>
+
+  <div id="dash" class="hidden">
+    <h1>YourTube Ops</h1>
+    <p class="sub" id="updated"></p>
+    <div class="toolbar">
+      <span class="muted">Families:</span>
+      <button id="scope-new" class="on" type="button">New since launch</button>
+      <button id="scope-all" type="button">All</button>
+      <button id="refresh" type="button">Refresh</button>
+      <button id="forget" type="button">Forget key</button>
+    </div>
+
+    <div class="tiles" id="tiles"></div>
+
+    <h2>Warnings</h2>
+    <div id="warnings"></div>
+
+    <h2>Funnel: from signup to a child liking videos</h2>
+    <div class="card" id="funnel"></div>
+
+    <h2>Landing page views per day</h2>
+    <div class="card"><div class="days" id="days"></div><div class="axis" id="days-axis"></div></div>
+
+    <h2>Daily numbers</h2>
+    <div class="card scroll"><table id="daily"></table></div>
+
+    <h2>Where visitors come from (last 14 days)</h2>
+    <div class="card" id="refs"></div>
+
+    <h2>Families</h2>
+    <div class="card scroll"><table id="families"></table></div>
+  </div>
+</main>
+<script>
+(() => {
+  const $ = id => document.getElementById(id);
+  const el = (tag, props = {}, ...kids) => {
+    const n = document.createElement(tag);
+    for (const [k, v] of Object.entries(props)) {
+      if (k === 'class') n.className = v; else if (k === 'text') n.textContent = v; else n.setAttribute(k, v);
+    }
+    for (const c of kids) if (c != null) n.append(c instanceof Node ? c : document.createTextNode(String(c)));
+    return n;
+  };
+  const store = {
+    get() { try { return localStorage.getItem('yt-ops-key') || ''; } catch { return ''; } },
+    set(v) { try { localStorage.setItem('yt-ops-key', v); } catch { /* private mode */ } },
+    clear() { try { localStorage.removeItem('yt-ops-key'); } catch { /* ignore */ } },
+  };
+  let key = store.get();
+  let data = null;
+  let scope = 'new';
+
+  const ago = t => {
+    if (!t) return '—';
+    const ms = Date.now() - Date.parse(t.includes('T') ? t : t.replace(' ', 'T') + 'Z');
+    const m = Math.round(ms / 60000);
+    if (m < 60) return `${m} min ago`;
+    const h = Math.round(m / 60);
+    if (h < 48) return `${h} h ago`;
+    return `${Math.round(h / 24)} days ago`;
+  };
+
+  async function load() {
+    try {
+      const r = await fetch('/api/ops?days=14', { headers: { 'X-Stats-Key': key }, cache: 'no-store' });
+      if (r.status === 404) throw new Error('That key was not accepted.');
+      if (!r.ok) throw new Error(`Server error ${r.status}`);
+      data = await r.json();
+      store.set(key);
+      $('login').classList.add('hidden');
+      $('dash').classList.remove('hidden');
+      render();
+    } catch (e) {
+      $('dash').classList.add('hidden');
+      $('login').classList.remove('hidden');
+      $('login-error').textContent = e.message;
+      $('login-error').classList.toggle('hidden', !key);
+    }
+  }
+
+  function bars(container, rows) {
+    container.replaceChildren();
+    const max = Math.max(1, ...rows.map(r => r[1]));
+    for (const [label, n, of] of rows) {
+      const pct = of ? ` (${Math.round(100 * n / Math.max(1, of))}%)` : '';
+      container.append(el('div', { class: 'row', title: `${label}: ${n}${pct}` },
+        el('div', { class: 'lab', text: label }),
+        el('div', { class: 'track' }, el('div', { class: 'fill', style: `width:${100 * n / max}%` })),
+        el('div', { class: 'val', text: `${n}${pct}` })));
+    }
+  }
+
+  function render() {
+    const fams = data.families.filter(f => scope === 'all' || f.is_new);
+    const f = data.funnel[scope];
+    const totals = {};
+    for (const d of Object.values(data.days)) for (const [k, v] of Object.entries(d)) totals[k] = (totals[k] || 0) + v;
+    const cap = data.signup_cap;
+
+    $('updated').textContent = `Updated ${new Date(data.generated_at).toLocaleString()}` +
+      (data.signup_since ? ` · "New" = signed up since ${data.signup_since} UTC` : '') +
+      ` · Worker last checked in: ${data.worker_last_seen ? ago(data.worker_last_seen) : 'not since the last server restart'}`;
+
+    const tiles = [
+      ['Landing views (14 days)', totals['view:landing'] || 0],
+      ['Signup page views', totals['view:admin'] || 0],
+      ['New families', data.funnel.new.families],
+      ['Places left', cap.limited ? Math.max(0, cap.slots - cap.used) : '∞'],
+      ['Waitlist', data.waitlist_total],
+      ['Donate clicks', totals['click:donate'] || 0],
+    ];
+    $('tiles').replaceChildren(...tiles.map(([l, n]) => el('div', { class: 'card tile' }, el('div', { class: 'n', text: n }), el('div', { class: 'l', text: l }))));
+
+    const w = data.warnings.filter(x => scope === 'all' || fams.some(fm => fm.email === x.email));
+    $('warnings').replaceChildren(...(w.length ? w.map(x => el('div', { class: 'warn', text: '⚠ ' + x.issue })) : [el('div', { class: 'ok', text: '✓ Nothing needs attention' })]));
+
+    bars($('funnel'), [
+      ['Families signed up', f.families],
+      ['Added a child', f.with_kid, f.families],
+      ['Approved channels', f.with_approved_channels, f.families],
+      ["Set up child's device", f.device_set_up, f.families],
+      ['Child watched a video', f.watched, f.families],
+      ['Child liked a video', f.liked, f.families],
+    ]);
+
+    const dayKeys = Object.keys(data.days);
+    const maxV = Math.max(1, ...dayKeys.map(d => data.days[d]['view:landing'] || 0));
+    $('days').replaceChildren(...dayKeys.map(d => {
+      const v = data.days[d]['view:landing'] || 0;
+      return el('div', { class: 'col', title: `${d}: ${v} landing views` }, el('div', { class: 'b', style: `height:${100 * v / maxV}%` }));
+    }));
+    $('days-axis').replaceChildren(el('span', { text: dayKeys[0] || '' }), el('span', { text: dayKeys.at(-1) || '' }));
+
+    const cols = [['view:landing', 'Landing views'], ['view:admin', 'Signup page'], ['signup', 'Signups'], ['waitlist', 'Waitlist'],
+      ['kid_created', 'Children added'], ['kid_setup', 'Devices set up'], ['click:donate', 'Donate clicks']];
+    const thead = el('tr', {}, el('th', { text: 'Day (UTC)' }), ...cols.map(([, l]) => el('th', { class: 'num', text: l })));
+    const rows = dayKeys.slice().reverse().map(d => el('tr', {}, el('td', { text: d }), ...cols.map(([k]) => el('td', { class: 'num', text: data.days[d][k] || 0 }))));
+    $('daily').replaceChildren(el('thead', {}, thead), el('tbody', {}, ...rows));
+
+    const refs = Object.entries(totals).filter(([k]) => k.startsWith('ref:')).map(([k, v]) => [k.slice(4), v]).sort((a, b) => b[1] - a[1]).slice(0, 12);
+    const direct = Math.max(0, (totals['view:landing'] || 0) - refs.reduce((s, r) => s + r[1], 0));
+    if (refs.length || direct) bars($('refs'), [...refs.map(([h, v]) => [h === 't.co' ? 't.co (X / Twitter)' : h, v]), ['Direct / unknown', direct]]);
+    else $('refs').replaceChildren(el('div', { class: 'muted', text: 'No visits yet' }));
+
+    const head = ['Family', 'Signed up', 'Child', 'Channels ✓ / ? / ✗', 'Status', 'Videos in feed', 'Waiting for check', 'Filtered out', 'Device', 'Last opened', 'Watched (7d)', 'Liked', 'Parent 👍 / 👎', 'Feedback'];
+    const body = [];
+    for (const fm of fams) {
+      const tag = fm.is_new ? el('span', { class: 'tag new', text: 'new' }) : null;
+      if (!fm.kids.length) {
+        body.push(el('tr', {}, el('td', {}, fm.email, ' ', tag), el('td', { text: ago(fm.created_at) }),
+          el('td', { class: 'muted', text: 'no child yet', colspan: String(head.length - 2) })));
+        continue;
+      }
+      fm.kids.forEach((k, i) => {
+        body.push(el('tr', {},
+          el('td', {}, i === 0 ? fm.email : '', ' ', i === 0 ? tag : null),
+          el('td', { text: i === 0 ? ago(fm.created_at) : '' }),
+          el('td', { text: `Age ${k.age ?? '?'}${k.has_guidelines ? ' · guidelines' : ''}` }),
+          el('td', { class: 'num', text: `${k.channels.approved} / ${k.channels.pending} / ${k.channels.rejected}` }),
+          el('td', {}, el('span', { class: 'tag', text: k.channels_status })),
+          el('td', { class: 'num', text: k.videos_available }),
+          el('td', { class: 'num', text: k.videos_pending }),
+          el('td', { class: 'num', text: k.videos_blocked }),
+          el('td', { text: k.device_setup_at ? ago(k.device_setup_at) : (k.watched ? 'yes' : '—') }),
+          el('td', { text: ago(k.last_seen_at || k.last_watch_at) }),
+          el('td', { class: 'num', text: `${k.watched} (${k.watched_7d})` }),
+          el('td', { class: 'num', text: k.likes }),
+          el('td', { class: 'num', text: `${k.parent_up} / ${k.parent_down}` }),
+          el('td', { class: 'num', text: k.feedback })));
+      });
+    }
+    $('families').replaceChildren(el('thead', {}, el('tr', {}, ...head.map((h, i) => el('th', { class: i >= 3 && i !== 4 && i !== 8 && i !== 9 ? 'num' : '', text: h, title: h.startsWith('Channels') ? 'approved / waiting for parent / skipped' : '' })))),
+      el('tbody', {}, ...(body.length ? body : [el('tr', {}, el('td', { class: 'muted', text: 'No families in this view', colspan: String(head.length) }))])));
+  }
+
+  $('login-form').addEventListener('submit', e => { e.preventDefault(); key = $('ops-key').value.trim(); load(); });
+  $('refresh').addEventListener('click', load);
+  $('forget').addEventListener('click', () => { store.clear(); key = ''; $('ops-key').value = ''; $('dash').classList.add('hidden'); $('login').classList.remove('hidden'); });
+  $('scope-new').addEventListener('click', () => { scope = 'new'; $('scope-new').classList.add('on'); $('scope-all').classList.remove('on'); render(); });
+  $('scope-all').addEventListener('click', () => { scope = 'all'; $('scope-all').classList.add('on'); $('scope-new').classList.remove('on'); render(); });
+  setInterval(() => { if (data && document.visibilityState === 'visible') load(); }, 60000);
+  if (key) load();
+})();
+</script>
+</body>
+</html>
