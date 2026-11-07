@@ -41,8 +41,15 @@ function kidSummary(db, k) {
   let interests = 0;
   try { interests = (JSON.parse(k.interests || '[]') || []).length; } catch { /* ignore */ }
 
+  // For empty feeds, list the approved channels so the cause can be diagnosed.
+  const empty_feed_channels = videos_available === 0
+    ? db.prepare("SELECT channel_id, title, source FROM channels WHERE kid_id = ? AND status = 'approved' LIMIT 10").all(k.id)
+    : undefined;
+
   return {
     age: k.age,
+    last_pushed_at: k.last_pushed_at,
+    empty_feed_channels,
     created_at: k.created_at,
     interests,
     has_guidelines: !!(k.guidelines && k.guidelines.trim()),

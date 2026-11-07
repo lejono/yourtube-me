@@ -126,6 +126,10 @@ function parseManifestTime(value) {
  * @param {number} nowMs
  * @returns {{ refresh: boolean, reason: string }}
  */
+// Empty feeds whose refresh found nothing: retry after this long (in memory).
+const EMPTY_FEED_RETRY_MS = 2 * 60 * 60 * 1000;
+const emptyFeedRetryAt = new Map();
+
 export function shouldRefreshKidFeed(kid, nowMs = Date.now()) {
   if (!kid.channels || kid.channels.length === 0) {
     return { refresh: false, reason: 'no approved channels' };
@@ -570,10 +574,25 @@ export async function runSlowLoop() {
       console.log(`[worker] Skipping ${kid.kid_name}: ${decision.reason}`);
       continue;
     }
+    const retryAt = emptyFeedRetryAt.get(kid.kid_id);
+    if (retryAt && Date.now() < retryAt) {
+      console.log(`[worker] Skipping ${kid.kid_name}: empty feed, last attempt found nothing; retrying after ${new Date(retryAt).toISOString()}`);
+      continue;
+    }
 
     try {
       console.log(`[worker] Refreshing ${kid.kid_name}: ${decision.reason}`);
       const videos = await processKid(kid, { rssCache });
+      const feedIsEmpty = Number(kid.approved_video_count ?? 0) === 0;
+      if (videos.length === 0 && feedIsEmpty) {
+        // Don't record this as a refresh (that would block retries for 24h
+        // and leave the child with an empty feed). Retry in 2h instead;
+        // a retry only re-reads public RSS, no Claude calls.
+        emptyFeedRetryAt.set(kid.kid_id, Date.now() + EMPTY_FEED_RETRY_MS);
+        console.log(`[worker] No videos found for ${kid.kid_name} (feed empty); will retry in 2h`);
+        continue;
+      }
+      emptyFeedRetryAt.delete(kid.kid_id);
       await getPushVideos()(kid.kid_id, videos);
       if (videos.length > 0) {
         console.log(`[worker] Pushed ${videos.length} videos for ${kid.kid_name}`);

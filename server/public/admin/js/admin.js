@@ -348,6 +348,10 @@ function renderKidList() {
 
     card.appendChild(makeEl('div', { className: 'kid-card-name', textContent: kid.name }));
     card.appendChild(makeEl('div', { className: 'kid-card-meta', textContent: kid.age ? `Age ${kid.age}` : 'Age not set' }));
+    card.appendChild(makeEl('div', {
+      className: kid.device_setup ? 'kid-card-device done' : 'kid-card-device todo',
+      textContent: kid.device_setup ? '✓ Set up on a device' : 'Not set up on a device yet',
+    }));
 
     card.addEventListener('click', () => openKidDetail(kid.id));
     card.addEventListener('keydown', e => {
@@ -542,7 +546,17 @@ function renderGuidelinesSection(kid) {
 
 // ---- Setup link section ----
 
+function renderDeviceCallout(kid) {
+  const needsSetup = !kid.device_setup;
+  $('device-callout').classList.toggle('hidden', !needsSetup);
+  $('device-done').classList.toggle('hidden', needsSetup);
+  if (needsSetup) {
+    $('device-callout-title').textContent = `Next step: set up ${kid.name}'s device`;
+  }
+}
+
 function renderSetupLinkSection(kid) {
+  renderDeviceCallout(kid);
   $('setup-link-url').textContent = kid.setup_token;
   $('setup-link-url').dataset.url = kid.setup_token;
   $('setup-link-kid-id').value = kid.id;

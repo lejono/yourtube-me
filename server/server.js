@@ -443,7 +443,11 @@ async function handleRequest(req, res) {
       if (!session) return json(res, 401, { error: 'Unauthorized' });
 
       if (method === 'GET') {
-        const kids = listKids(db, session.family_id);
+        const watchedStmt = db.prepare('SELECT 1 FROM watches WHERE kid_id = ? LIMIT 1');
+        const kids = listKids(db, session.family_id).map(k => ({
+          ...k,
+          device_setup: !!k.device_setup_at || !!watchedStmt.get(k.id),
+        }));
         return json(res, 200, kids);
       }
 
@@ -608,6 +612,10 @@ async function handleRequest(req, res) {
         if (!title) title = channel_id; // last resort
 
         const channel = addChannel(db, kidId, { channel_id, title, thumbnail });
+        // Start filling the feed now rather than waiting for the worker.
+        fetchAndInsertVideos(db, kidId, [{ channel_id, title }]).catch(err => {
+          console.warn('[rss] Fetch on channel add failed:', err.message);
+        });
         return json(res, 201, channel);
       }
     }
@@ -631,6 +639,12 @@ async function handleRequest(req, res) {
 
       if (method === 'POST' && action === '/approve') {
         approveChannel(db, kidId, channelId);
+        const ch = db.prepare('SELECT channel_id, title FROM channels WHERE kid_id = ? AND channel_id = ?').get(kidId, channelId);
+        if (ch) {
+          fetchAndInsertVideos(db, kidId, [ch]).catch(err => {
+            console.warn('[rss] Fetch on channel approve failed:', err.message);
+          });
+        }
         return json(res, 200, { ok: true });
       }
 

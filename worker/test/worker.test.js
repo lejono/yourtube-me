@@ -372,7 +372,7 @@ describe('runSlowLoop', () => {
     assert.equal(pushed[0].count, 1);
   });
 
-  test('records empty refresh attempts so they are not retried every loop', async () => {
+  test('records empty refresh attempts for a feed that already has videos', async () => {
     const pushed = [];
     _setDeps({
       fetchManifest: async () => [
@@ -380,9 +380,10 @@ describe('runSlowLoop', () => {
           kid_id: 'kid-empty-rss',
           kid_name: 'Empty RSS',
           channels: [{ channel_id: 'UC_empty', title: 'Empty Channel' }],
-          approved_video_count: 0,
-          watched_video_count: 0,
-          unwatched_video_count: 0,
+          approved_video_count: 10,
+          watched_video_count: 6,
+          unwatched_video_count: 4,
+          last_watched_at: new Date().toISOString(),
           last_pushed_at: null,
         },
       ],
@@ -394,6 +395,35 @@ describe('runSlowLoop', () => {
     await runSlowLoop();
 
     assert.deepEqual(pushed, [{ kidId: 'kid-empty-rss', count: 0 }]);
+  });
+
+  test('an EMPTY feed whose refresh finds nothing is not recorded, and is retried after 2h, not 24h', async () => {
+    const pushed = [];
+    let fetches = 0;
+    _setDeps({
+      fetchManifest: async () => [
+        {
+          kid_id: 'kid-empty-feed',
+          kid_name: 'Empty Feed',
+          channels: [{ channel_id: 'UC_flaky', title: 'Flaky Channel' }],
+          approved_video_count: 0,
+          watched_video_count: 0,
+          unwatched_video_count: 0,
+          last_pushed_at: null,
+        },
+      ],
+      fetchRSS: async () => { fetches++; return []; },
+      classifyVideos: async () => [],
+      pushVideos: async (kidId, videos) => { pushed.push({ kidId, count: videos.length }); },
+    });
+
+    await runSlowLoop();
+    assert.deepEqual(pushed, [], 'empty result must not mark the feed as filled');
+    assert.equal(fetches, 1);
+
+    // Next loop (30 min later in production): still inside the 2h back-off
+    await runSlowLoop();
+    assert.equal(fetches, 1, 'no retry within 2 hours');
   });
 
   test('skips kids whose approved feed is still healthy', async () => {

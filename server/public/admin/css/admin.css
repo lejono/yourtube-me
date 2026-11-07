@@ -1018,3 +1018,45 @@ textarea {
   color: #d63333;
   font-weight: 600;
 }
+
+/* --- Device setup: next-step callout and kid card status --- */
+
+.device-callout {
+  background: #fff7f0;
+  border: 1px solid #ffd9bf;
+  border-left: 4px solid #e83333;
+  border-radius: 10px;
+  padding: 0.9rem 1.1rem;
+  margin: 0.75rem 0 1rem;
+}
+
+.device-callout-title {
+  font-weight: 700;
+  margin: 0 0 0.4rem;
+}
+
+.device-callout-steps {
+  margin: 0;
+  padding-left: 1.25rem;
+  line-height: 1.55;
+}
+
+.device-done {
+  color: #1f7a3a;
+  font-weight: 600;
+  margin: 0.5rem 0 0.75rem;
+}
+
+.kid-card-device {
+  font-size: 0.85rem;
+  margin-top: 0.3rem;
+}
+
+.kid-card-device.todo {
+  color: #b54708;
+  font-weight: 600;
+}
+
+.kid-card-device.done {
+  color: #1f7a3a;
+}

@@ -103,7 +103,7 @@
       </div>
 
       <div class="dash-intro">
-        <p>Each child gets their own filtered YouTube feed. Add a child, tell us what they're into, and our algorithm will suggest channels for you to review. Once you approve, they get a personal link to bookmark on their device. No login, no password, no YouTube algorithm.</p>
+        <p>Each child gets their own filtered YouTube feed. Add a child, tell us what they're into, and our algorithm will suggest channels for you to review. Once you approve some, open yourtube.me on your child's device and type their 3-word code. No login, no password, no YouTube algorithm.</p>
       </div>
 
       <div class="section-header">
@@ -164,6 +164,16 @@
 
         <!-- Hidden field for kid id used by token/revoke actions -->
         <input type="hidden" id="setup-link-kid-id" value="">
+
+        <div id="device-callout" class="device-callout hidden">
+          <p class="device-callout-title" id="device-callout-title">Next step: set up your child's device</p>
+          <ol class="device-callout-steps">
+            <li>On your child's tablet, phone or computer, open <strong>yourtube.me</strong>.</li>
+            <li>Type the code below into the box that says "Already have a code?" and press Go.</li>
+            <li>That's it. The device stays signed in, so you only do this once per device.</li>
+          </ol>
+        </div>
+        <p id="device-done" class="device-done hidden">&#10003; Set up on a device</p>
 
         <p class="setup-link-label">Your child's code</p>
         <p class="hint" style="margin-bottom:0.5rem">Tell your child to go to <strong>yourtube.me</strong> and type this code. No link to copy, no account to create.</p>
